@@ -1,0 +1,84 @@
+
+.dark {
+  background-color: #494949 ;
+  nav,
+  .pageTitle,
+  .navCont,
+  .logoName {
+    background-color: $darkMode !important;
+    border-color: #7c7c7c !important;
+  }
+  .nico {
+    &:hover {
+      background-color: #848484;
+      svg {
+        path {
+          fill: $active;
+        }
+      }
+    }
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  .logo {
+    i {
+      color: #fff;
+    }
+  }
+  .fulltime{
+    border-color: #7c7c7c !important;
+    span{
+      &:nth-child(1){
+        span{
+          color: #fff;
+        }
+      }
+    }
+  }
+  .titName{
+    span{
+      &:nth-child(1){
+        color: #fff;
+      }
+      &:nth-child(n + 2){
+        color: #d3d3d3;
+      }
+      &:last-child{
+        color: $active;
+      }
+    }
+  }
+  .span{
+    color: #fff;
+  }
+  .nLinks{
+    li{
+      a,button{
+        color: #fff;
+        svg{
+          path{
+            fill: #fff;
+          }
+        }
+        img{
+          filter: invert(1) saturate(0%) brightness(2);
+        }
+      }
+    }
+  }
+  .nLinks{
+    .nLink.active{
+      background-color: #6e6e6e;
+    }
+    .red{
+      svg{
+        path{
+          fill: red;
+        }
+      }
+    }
+  }
+}
