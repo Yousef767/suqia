@@ -1976,4 +1976,7 @@ nav.nav .logo span {
 }
 .dark .nLinks .red svg path {
   fill: red;
+}
+.dark .dropMenu .active {
+  background-color: #6e6e6e;
 }/*# sourceMappingURL=style.css.map */
