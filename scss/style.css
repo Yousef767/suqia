@@ -555,7 +555,7 @@ nav.nav .logo span {
   flex-direction: column;
   align-items: flex-start;
   width: 300px;
-  height: 100vh;
+  height: 100dvh;
   padding: 0 0 50px 0;
   position: fixed;
   background-color: #fff;
@@ -936,7 +936,7 @@ nav.nav .logo span {
     right: -100%;
     transition: 0.2s;
     z-index: 5;
-    height: calc(100vh - 80px);
+    height: calc(100dvh - 80px);
     overflow-y: scroll;
     padding-top: 0;
   }
