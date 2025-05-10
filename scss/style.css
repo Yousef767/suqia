@@ -1336,18 +1336,18 @@ nav.nav .logo span {
   height: 17px;
 }
 .tg tbody tr td:first-child {
-  border-top-right-radius: 5px;
+  border-top-right-radius: 10px;
   padding-right: 20px;
 }
 .tg tbody tr td:last-child {
-  border-top-left-radius: 5px;
+  border-top-left-radius: 10px;
   padding-left: 20px;
 }
 .tg tbody tr td:first-child {
-  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 10px;
 }
 .tg tbody tr td:last-child {
-  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 10px;
 }
 
 .tg th {
