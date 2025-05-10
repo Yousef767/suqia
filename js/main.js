@@ -15,6 +15,12 @@ const message = (message, isError) => {
   }, 3000);
 };
 
+let menuBtn = document.getElementById("menu");
+let dcont = document.querySelector('.dcont');
+
+menuBtn.addEventListener("click", () => {
+  dcont.classList.toggle("showNavLinks");
+});
 const drop = document.querySelectorAll(".drop");
 drop.forEach((e) => {
   e.addEventListener("click", () => {
@@ -43,8 +49,14 @@ const handleTheme = () => {
   const theme = localStorage.getItem("theme");
   if (theme === "dark") {
     document.body.className = "dark";
+    darkIcon.forEach((e) => {
+      e.classList.add("active");
+    });
   } else {
     document.body.className = "light";
+    darkIcon.forEach((e) => {
+      e.classList.remove("active");
+    });
   }
 };
 
@@ -94,6 +106,41 @@ if (search) {
     search.classList.remove("active");
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const selects = document.querySelectorAll(".select2");
+
+  selects.forEach((select) => {
+    const selectedOption = select.querySelector(".selected-option");
+    const customMenu = select.querySelector(".custom-menu");
+    const input = select.querySelector("input");
+
+    select.addEventListener("click", () => {
+      select.classList.toggle("active");
+    });
+
+    customMenu.querySelectorAll("li").forEach((item) => {
+      item.addEventListener("click", (e) => {
+        const value = item.dataset.value;
+        const text = item.textContent.trim();
+        selectedOption.textContent = text;
+        input.value = value;
+        setTimeout(() => {
+          customMenu.classList.remove("active");
+          select.classList.remove("active");
+        }, 100);
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!select.contains(e.target)) {
+        customMenu.classList.remove("active");
+        select.classList.remove("active");
+      }
+    });
+  });
+});
+
 // let i = document.querySelectorAll(".i");
 
 // i.forEach((e) => {

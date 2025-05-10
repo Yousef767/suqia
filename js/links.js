@@ -8,10 +8,5 @@
 //   });
 // });
 
-let menuBtn = document.getElementById("menu");
-let dcont = document.querySelector('.dcont');
 
-menuBtn.addEventListener("click", () => {
-  dcont.classList.toggle("showNavLinks");
-});
 

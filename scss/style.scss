@@ -92,6 +92,18 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+}
 
 .js-scroll {
   opacity: 0;
@@ -241,6 +253,14 @@ nav.nav {
     @include circle(35px);
   }
 }
+.nico.active {
+  background-color: #eaebef;
+  svg {
+    path {
+      fill: #008baa;
+    }
+  }
+}
 .logo {
   display: flex;
   align-items: center;
@@ -308,6 +328,24 @@ nav.nav {
     text-decoration: underline;
   }
 }
+.inputs{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 30px;padding-bottom: 30px;
+  .input{
+    width: calc(100% / 3 - 10px);
+    flex-grow: 1;
+    @media (max-width:900px) {
+      width: calc(100% / 2 - 15px);
+    }
+    @media (max-width:700px) {
+      width: calc(100%);
+    }
+  }
+}
 .input {
   width: 100%;
   display: flex;
@@ -321,19 +359,22 @@ nav.nav {
   }
   input,
   textarea,
-  select {
+  select,
+  .selected-option {
     width: 100%;
     height: 45px;
     @include noBorder();
-    border: 1px solid $black;
+    border: 1px solid #b3b3b3;
     background-color: #fff;
     color: #000;
-    padding-right: 15px;
+    padding: 0 15px;
     border-radius: 5px;
     font-size: 1em;
+    text-align: right;
+      cursor: pointer;
     &::placeholder {
-      color: #00000088;
-      opacity: 0.6;
+      color: #000000;
+      opacity: 0.3;
     }
   }
   textarea {
@@ -362,12 +403,81 @@ nav.nav {
     color: $black;
     transition: 0.2s;
     cursor: pointer;
+    transition: 0.3s all ease;
+  }
+  .fa-calendar-days{
+    color: #000000;
+    opacity: .3;
+  }
+  svg {
+    position: absolute;
+    right: 15px;
+    path {
+      transition: 0.3s all ease;
+    }
   }
 }
-.select.activeSelect {
+.select.active {
   i {
     transform: rotate(-90deg);
-    color: $main;
+    color: #fff;
+  }
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
+  .custom-menu {
+    display: block;
+  }
+  .selected-option {
+    background-color: $active;
+    color: #fff;
+  
+  }
+}
+.select2 {
+  .selected-option {
+    width: 300px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s all ease;
+  }
+  select {
+    display: none;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    path {
+      transition: 0.3s all ease;
+    }
+  }
+}
+.custom-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 2;
+  list-style: none;
+  width: 100%;
+  box-shadow: 0px 0px 5px $shadow;
+  li {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 7px 20px;
+    border-bottom: 2px solid $gray;
+    cursor: pointer;
+    &:last-child {
+      border: none;
+    }
   }
 }
 
@@ -640,6 +750,7 @@ nav.nav {
       width: 20px;
     }
   }
+  user-select: none;
 }
 .nLinks {
   width: 100%;
@@ -857,6 +968,7 @@ nav.nav {
     @include noBorder();
     border-radius: 10px;
     font-size: 1rem;
+    text-align: right;
     width: 0;
     height: 45px;
     background-color: $gray;
@@ -873,7 +985,7 @@ nav.nav {
   height: fit-content;
   border-radius: 10px;
   input {
-    width: 200px;
+    width: 300px;
     padding: 0 15px 0 40px;
   }
   svg {
@@ -1236,12 +1348,22 @@ nav.nav {
   width: fit-content;
   @include flex();
   @include noBorder();
-  background-color: $black;
+  background-color: $active;
   color: #fff;
-  height: 40px;
+  height: 45px;
   padding: 0 30px;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-weight: 600;
+  gap: 10px;
+  i{
+    color: #fff;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
 }
 @media (max-width: 651px) {
   .foLIn {
@@ -1387,15 +1509,14 @@ nav.nav {
     }
   }
 }
-.status{
+.status {
   @include flex();
   height: 32px;
   border-radius: 15px;
   width: fit-content;
   margin: 0 auto;
   padding: 0 20px;
-  font-size: .9rem
-  ;
+  font-size: 0.9rem;
   min-width: 90px;
 }
 .status-active {
@@ -1405,11 +1526,10 @@ nav.nav {
 }
 
 .status-inactive {
-    @extend .status;
+  @extend .status;
   background-color: $red;
   color: #fff;
 }
-
 
 .pageCont {
   width: 100%;
@@ -1832,23 +1952,35 @@ nav.nav {
 .wbtns {
   width: 100%;
   display: flex;
-  justify-content: left;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
-  transform: translateY(20px);
   flex-wrap: wrap;
+  padding-top: 30px;
+  form {
+    display: flex;
+    gap: 10px;
+
+    input,
+    .select2 {
+      width: 300px !important;
+    }
+  }
 }
 .btn {
-  height: 40px;
-  padding: 0 30px;
+  height: 44px;
+  padding: 0 20px;
   border-radius: 5px;
-  background-color: $black;
+  background-color: $active;
   color: #fff;
   @include flex();
   cursor: pointer;
   font-size: 1em;
   font-weight: 500;
   gap: 10px;
+  i {
+    color: #fff;
+  }
 }
 @media (max-width: 450px) {
   .btn {
@@ -2019,7 +2151,6 @@ nav.nav {
   display: none;
 }
 .message {
-  
   width: 100%;
   @include flex();
   position: fixed;
@@ -2068,5 +2199,16 @@ nav.nav {
     }
   }
 }
-
+@media (max-width: 750px) {
+  .wbtns {
+    form{
+      width: 100%;
+      flex-direction: column;
+    input,
+    .select2,.selected-option {
+      width: 100% !important;
+    }
+    }
+  }
+}
 @import "./_dark";

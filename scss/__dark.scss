@@ -22,6 +22,14 @@
       }
     }
   }
+  .nico.active {
+    background-color: #848484;
+    svg {
+      path {
+        fill: $active;
+      }
+    }
+  }
   .logo {
     i {
       color: #fff;
@@ -104,12 +112,56 @@
   .tg {
     tr {
       td {
-        background-color: #bcbcbc;
+        background-color: #979797;
         border-color: #7c7c7c !important;
       }
     }
   }
-  .paginationCont{
-      background-color: #bcbcbc;
+  .paginationCont {
+    background-color: #979797;
+  }
+  .tools {
+    .a {
+      .fa-file-pen {
+        color: #e3e2e2;
+      }
+    }
+  }
+  .input {
+    span,
+    label {
+      color: #fff;
+    }
+    input,
+    textarea,
+    select,
+    .selected-option {
+      background-color: #979797;
+      &::placeholder {
+        color: #fff;
+        opacity: 0.8;
+      }
+    }
+  }
+  .select2.active {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+    .custom-menu {
+      display: block;
+    }
+    .selected-option {
+      background-color: $active;
+      color: #fff;
+    }
+  }
+  .tg{
+    tr{
+      td{
+        color: #fff;
+      }
+    }
   }
 }

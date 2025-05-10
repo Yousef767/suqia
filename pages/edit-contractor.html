@@ -295,7 +295,11 @@
           <span>إدارة الخدمات
             <img src="../media/icons/arrowt.svg" alt="">
           </span>
-          <span> إدارة المقاولين و التكاليف</span>
+          <span>
+            إدارة المقاولين و التكاليف
+            <img src="../media/icons/arrowt.svg" alt="">
+          </span>
+          <span> تعديل المقاول</span>
         </div>
         <div class="fulltime">
           <span>
@@ -314,87 +318,87 @@
       </div>
       <div class="pageCont">
         <div class="conta p30">
-          <div class="wbtns">
-            <a href="add-contractor.html" class="btn"> إضافة مقاول جديد + </a>
-            <form>
+          <form class="form">
+            <div class="inputs">
               <div class="input">
-                <div class="select select2">
-                  <input type="text" hidden>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_3524_689)">
-                      <path
-                        d="M24.0016 4V8C24.0016 9.65 22.6516 11 21.0016 11H17.0016C15.3516 11 14.0016 9.65 14.0016 8V4C14.0016 2.35 15.3516 1 17.0016 1H21.0016C22.6516 1 24.0016 2.35 24.0016 4ZM21.0016 15H19.0016C17.3516 15 16.0016 16.35 16.0016 18V20C16.0016 21.65 17.3516 23 19.0016 23H21.0016C22.6516 23 24.0016 21.65 24.0016 20V18C24.0016 16.35 22.6516 15 21.0016 15ZM10.3116 18.28L7.0016 21.43V1C7.0016 0.45 6.5516 0 6.0016 0C5.4516 0 5.0016 0.45 5.0016 1V21.43L1.6916 18.28C1.2916 17.9 0.661599 17.91 0.281599 18.31C-0.0984014 18.71 -0.0884014 19.34 0.311599 19.72L3.8816 23.12C4.4516 23.69 5.2016 24 6.0016 24C6.8016 24 7.5516 23.69 8.1016 23.14L11.6916 19.73C12.0916 19.35 12.1116 18.72 11.7216 18.32C11.3416 17.92 10.7116 17.9 10.3116 18.29V18.28Z"
-                        fill="#212323" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_3524_689">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <div class="selected-option">فرز البيانات</div>
-                  <ul class="custom-menu">
-                    <li data-value="contractor-status">
-                      <img src="../media/icons/c.svg" alt=""> حالة المقاول
-                    </li>
-                    <li data-value="contract-date">
-                      <img src="../media/icons/c.svg" alt=""> تاريخ التعاقد
-                    </li>
-                    <li data-value="projects-desc">
-                      <img src="../media/icons/c.svg" alt=""> عدد المشاريع (الأكثر الى الأقل)
-                    </li>
-                    <li data-value="projects-asc">
-                      <img src="../media/icons/c.svg" alt=""> عدد المشاريع (الأقل الى الأكثر)
-                    </li>
-                    <li data-value="contractor-country">
-                      <img src="../media/icons/c.svg" alt=""> دولة المقاول
-                    </li>
-                    <li data-value="services-count">
-                      <img src="../media/icons/c.svg" alt=""> عدد الخدمات
-                    </li>
-                  </ul>
-                  <i class="fa-regular fa-angle-left"></i>
+                <span>اسم المقاول :</span>
+                <input type="text" placeholder="اسم المقاول">
+              </div>
+              <div class="input">
+                <span> تاريخ التعاقد :</span>
+                <div class="select">
+                  <input type="date" placeholder="تاريخ التعاقد  ">
+                  <i class="fa-regular fa-calendar-days"></i>
                 </div>
               </div>
               <div class="input">
-                <input type="search" placeholder="بحث عن...">
+                <span> رقم الهاتف “اختياري” :</span>
+                <input type="tel" placeholder=" رقم الهاتف “اختياري” ">
               </div>
-              <button class="btn" type="submit">
-                ابحث
-                <i class="fa-regular fa-magnifying-glass"></i>
+              <div class="input">
+                <span> حالة المقاول :</span>
+                <div class="select">
+                  <select>
+                    <option value="null">حالة المقاول</option>
+                    <option value="1"> فعال</option>
+                    <option value="0"> متوقف</option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="input">
+                <span> دولة المقاول :</span>
+                <div class="select">
+                  <select>
+                    <option value="null">دولة المقاول</option>
+                    <option value="JO"> الاردن</option>
+                    <option value="EG"> مصر</option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="saveBtn">
+              حفظ التعديلات
+              <i class="fa-light fa-floppy-disk"></i>
+            </button>
+          </form>
+          <form class="form">
+            <div class="inputs">
+              <div class="input">
+                <span>اسم الخدمة :</span>
+                <input type="text" placeholder="اسم الخدمة ">
+              </div>
+              <div class="input">
+                <span> سعر الخدمة :</span>
+                <input type="number" placeholder=" سعر الخدمة  ">
+              </div>
+              <button class="saveBtn">
+                إضافة الخدمة للمقاول
+                <i class="fa-regular fa-circle-plus"></i>
               </button>
-            </form>
-          </div>
-          <div class="taIn">
+            </div>
+          </form>
+            <div class="taIn">
             <table class="tg">
               <thead>
                 <tr>
                   <th> #</th>
-                  <th> اسم المقاول</th>
-                  <th> حالة المقاول</th>
-                  <th>دولة المقاول</th>
-                  <th>عدد الخدمات المقدمة</th>
-                  <th>عدد المشاريع</th>
-                  <th>تاريخ التعاقد</th>
+                  <th>اسم الخدمة</th>
+                  <th>سعر الخدمة</th>
+                  <th>عدد مرات الطلب</th>
                   <th> العمليات </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>ابو يحيى</td>
-                  <td>
-                    <div class="status-active">
-                      فعّال
-                    </div>
-                  </td>
-                  <td>الهند</td>
-                  <td>4</td>
-                  <td>20</td>
-                  <td>25/04/2025</td>
+                  <td>اسم الخدمة</td>
+                  <td>500 دينار</td>
+                  <td>15</td>
                   <td>
                     <div class="tools">
-                      <a class="a" href="edit-contractor.html">
+                      <a class="a" href="##">
                         <i class="fa-light fa-file-pen"></i>
                         </button>
                         <a class="a" href="##">
@@ -405,19 +409,12 @@
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>ابو يحيى</td>
-                  <td>
-                    <div class="status-inactive">
-                      متوقف
-                    </div>
-                  </td>
-                  <td>الهند</td>
-                  <td>4</td>
-                  <td>20</td>
-                  <td>25/04/2025</td>
+                  <td>اسم الخدمة</td>
+                  <td>400 دينار</td>
+                  <td>16</td>
                   <td>
                     <div class="tools">
-                      <a class="a" href="edit-contractor.html">
+                      <a class="a" href="##">
                         <i class="fa-light fa-file-pen"></i>
                         </button>
                         <a class="a" href="##">
@@ -428,20 +425,6 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="paginationCont border2">
-            <div class="page">
-              عرض النتائج <span>1 - 10</span> من <span>50</span>
-            </div>
-            <div class="paginations">
-              <ul class="spans">
-                <li><a href="##" class="page-link active">1</a></li>
-                <li><a href="##" class="page-link">2</a></li>
-                <li><a href="##" class="page-link">3</a></li>
-                <li><a href="##" class="page-link">...</a></li>
-                <li><a href="##" class="page-link">5</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
