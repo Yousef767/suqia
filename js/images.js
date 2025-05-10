@@ -1,20 +1,17 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  let input = document.getElementById("file3");
-  let picsInner = document.getElementById("imgcont3");
+  let input = document.getElementById("file");
+  let picsInner = document.getElementById("imgcont");
 
   input.addEventListener(
     "input",
     debounce(() => {
-      putImages(input.files, picsInner, input.hasAttribute('multiple'));
+      putImages(input.files, picsInner, !input.getAttribute("multiple"));
       updateFiles(input, picsInner, "img");
     }, 300)
   );
 
-
-
   function putImages(files, container, reset = false, type = "img") {
-    if (!reset) container.innerHTML = "";
+    if (reset) container.innerHTML = "";
     for (let i = 0; i < files.length; i++) {
       let element =
         type === "img"

@@ -216,10 +216,13 @@ nav.nav {
   flex-direction: row-reverse;
 }
 .user {
+  @extend .border2;
   @include flex();
   cursor: pointer;
   position: relative;
-  padding: 0 10px 0 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
   img {
     @include circle(50px);
     object-fit: cover;
@@ -328,20 +331,21 @@ nav.nav {
     text-decoration: underline;
   }
 }
-.inputs{
+.inputs {
   width: 100%;
   display: flex;
   align-items: flex-end;
   gap: 15px;
   flex-wrap: wrap;
-  padding-top: 30px;padding-bottom: 30px;
-  .input{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .input {
     width: calc(100% / 3 - 10px);
     flex-grow: 1;
-    @media (max-width:900px) {
+    @media (max-width: 900px) {
       width: calc(100% / 2 - 15px);
     }
-    @media (max-width:700px) {
+    @media (max-width: 700px) {
       width: calc(100%);
     }
   }
@@ -371,7 +375,7 @@ nav.nav {
     border-radius: 5px;
     font-size: 1em;
     text-align: right;
-      cursor: pointer;
+    cursor: pointer;
     &::placeholder {
       color: #000000;
       opacity: 0.3;
@@ -405,9 +409,9 @@ nav.nav {
     cursor: pointer;
     transition: 0.3s all ease;
   }
-  .fa-calendar-days{
+  .fa-calendar-days {
     color: #000000;
-    opacity: .3;
+    opacity: 0.3;
   }
   svg {
     position: absolute;
@@ -433,7 +437,6 @@ nav.nav {
   .selected-option {
     background-color: $active;
     color: #fff;
-  
   }
 }
 .select2 {
@@ -1356,10 +1359,10 @@ nav.nav {
   border-radius: 10px;
   font-weight: 600;
   gap: 10px;
-  i{
+  i {
     color: #fff;
   }
-  img{
+  img {
     width: 20px;
     height: 20px;
     object-fit: contain;
@@ -2037,11 +2040,11 @@ nav.nav {
   align-items: center;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  background-color: #d30000;
+  border-radius: 5px;
+  background-color: $red;
   color: #fff;
   font-size: 1em;
-  left: -5px;
+  right: -5px;
   top: -5px;
   cursor: pointer;
 }
@@ -2201,14 +2204,41 @@ nav.nav {
 }
 @media (max-width: 750px) {
   .wbtns {
-    form{
+    form {
       width: 100%;
       flex-direction: column;
-    input,
-    .select2,.selected-option {
-      width: 100% !important;
+      input,
+      .select2,
+      .selected-option {
+        width: 100% !important;
+      }
     }
-    }
+  }
+}
+.labelImage {
+  flex-grow: 0 !important;
+}
+.label {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid $main;
+  padding: 0 15px !important;
+  position: relative;
+  font-weight: 600;
+  color: $main;
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin: 0;
+    transform: translate(0);
+    position: absolute;
+    left: 15px;
   }
 }
 @import "./_dark";
