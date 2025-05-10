@@ -23,7 +23,7 @@
       </div>
       <span class="span">الأقسام والصفحات</span>
       <ul class="nLinks">
-        <li><a class="nLink active" href="./home.html">
+        <li><a class="nLink" href="./home.html">
             <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M22.1576 8.29863L14.8887 1.34063C13.989 0.482103 12.7704 0 11.5 0C10.2296 0 9.01098 0.482103 8.11134 1.34063L0.842386 8.29863C0.57446 8.55342 0.362041 8.85657 0.21744 9.19052C0.0728402 9.52446 -0.00106413 9.88256 1.15762e-05 10.244V19.2484C1.15762e-05 19.9781 0.302912 20.678 0.842079 21.1941C1.38125 21.7101 2.11251 22 2.87501 22H20.125C20.8875 22 21.6188 21.7101 22.1579 21.1941C22.6971 20.678 23 19.9781 23 19.2484V10.244C23.0011 9.88256 22.9272 9.52446 22.7826 9.19052C22.638 8.85657 22.4255 8.55342 22.1576 8.29863ZM14.375 20.1656H8.625V16.5572C8.625 15.8275 8.9279 15.1276 9.46707 14.6115C10.0062 14.0955 10.7375 13.8056 11.5 13.8056C12.2625 13.8056 12.9938 14.0955 13.5329 14.6115C14.0721 15.1276 14.375 15.8275 14.375 16.5572V20.1656ZM21.0833 19.2484C21.0833 19.4916 20.9824 19.7249 20.8026 19.8969C20.6229 20.0689 20.3792 20.1656 20.125 20.1656H16.2917V16.5572C16.2917 15.3409 15.7868 14.1744 14.8882 13.3144C13.9896 12.4543 12.7708 11.9712 11.5 11.9712C10.2292 11.9712 9.01039 12.4543 8.11178 13.3144C7.21317 14.1744 6.70834 15.3409 6.70834 16.5572V20.1656H2.87501C2.62084 20.1656 2.37709 20.0689 2.19737 19.8969C2.01764 19.7249 1.91668 19.4916 1.91668 19.2484V10.244C1.91756 10.001 2.01844 9.76799 2.19747 9.59557L9.46642 2.64032C10.0066 2.1257 10.7378 1.83679 11.5 1.83679C12.2622 1.83679 12.9934 2.1257 13.5336 2.64032L20.8025 9.59832C20.9809 9.77007 21.0817 10.0019 21.0833 10.244V19.2484Z"
@@ -32,7 +32,7 @@
 
             الصفحة الرئيسية
           </a></li>
-        <li class="drop"><button class="nLink">
+        <li class="drop active"><button class="nLink active">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_3524_460)">
                 <path
@@ -49,7 +49,7 @@
             <img src="../media/icons/menuarrow.svg" alt="">
           </button>
           <div class="dropMenu">
-            <a href="./contractor-and-cost-management.html">
+            <a href="./contractor-and-cost-management.html" class="active">
               <img src="../media/icons/c.svg" alt="">
               إدارة المقاولين و التكاليف
             </a>
@@ -292,10 +292,10 @@
             لوحة التحكم
             <img src="../media/icons/bar.svg" alt="">
           </span>
-          <span>الصفحة الرئيسية
+          <span>إدارة الخدمات
             <img src="../media/icons/arrowt.svg" alt="">
           </span>
-          <span>لوحة التحكم</span>
+          <span> إدارة المقاولين و التكاليف</span>
         </div>
         <div class="fulltime">
           <span>
@@ -310,6 +310,88 @@
               3:54 PM
             </span>
           </span>
+        </div>
+      </div>
+      <div class="pageCont">
+        <div class="conta p30">
+          <div class="taIn">
+            <table class="tg">
+              <thead>
+                <tr>
+                  <th> #</th>
+                  <th> اسم المقاول</th>
+                  <th> حالة المقاول</th>
+                  <th>دولة المقاول</th>
+                  <th>عدد الخدمات المقدمة</th>
+                  <th>عدد المشاريع</th>
+                  <th>تاريخ التعاقد</th>
+                  <th> العمليات </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ابو يحيى</td>
+                  <td>
+                    <div class="status-active">
+                      فعّال
+                    </div>
+                  </td>
+                  <td>الهند</td>
+                  <td>4</td>
+                  <td>20</td>
+                  <td>25/04/2025</td>
+                  <td>
+                    <div class="tools">
+                      <a class="a" href="##">
+                        <i class="fa-light fa-file-pen"></i>
+                        </button>
+                        <a class="a" href="##">
+                          <i class="fa-light fa-trash-can"></i>
+                        </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ابو يحيى</td>
+                  <td>
+                    <div class="status-inactive">
+                      متوقف
+                    </div>
+                  </td>
+                  <td>الهند</td>
+                  <td>4</td>
+                  <td>20</td>
+                  <td>25/04/2025</td>
+                  <td>
+                    <div class="tools">
+                      <a class="a" href="##">
+                        <i class="fa-light fa-file-pen"></i>
+                        </button>
+                        <a class="a" href="##">
+                          <i class="fa-light fa-trash-can"></i>
+                        </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="paginationCont border2">
+            <div class="page">
+              عرض النتائج <span>1 - 10</span> من <span>50</span>
+            </div>
+            <div class="paginations">
+              <ul class="spans">
+                <li><a href="##" class="page-link active">1</a></li>
+                <li><a href="##" class="page-link">2</a></li>
+                <li><a href="##" class="page-link">3</a></li>
+                <li><a href="##" class="page-link">...</a></li>
+                <li><a href="##" class="page-link">5</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 

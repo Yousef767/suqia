@@ -1,3 +1,20 @@
+const message = (message, isError) => {
+  const div = document.createElement("div");
+  div.className = isError ? "message errorMessage" : "message";
+  const span = document.createElement("span");
+  const i = document.createElement("i");
+  i.className = isError
+    ? "fa-regular fa-circle-x"
+    : "fa-regular fa-circle-check";
+  span.innerHTML = message;
+  document.body.appendChild(div);
+  div.appendChild(span);
+  span.appendChild(i);
+  setTimeout(() => {
+    div.remove();
+  }, 3000);
+};
+
 const drop = document.querySelectorAll(".drop");
 drop.forEach((e) => {
   e.addEventListener("click", () => {
@@ -15,6 +32,7 @@ fullIcon.forEach((e) => {
         console.error(
           `Error attempting to enable full-screen mode: ${err.message}`
         );
+        message("وضع ملء الشاشة غير متاح علي لهذا الجهاز", true);
       });
     } else {
       document.exitFullscreen();
@@ -65,16 +83,27 @@ setInterval(updateTime, 1000);
 
 updateTime();
 
-let i = document.querySelectorAll(".i");
-
-i.forEach((e) => {
-  e.addEventListener("click", () => {
-    i.forEach((e) => {
-      e.classList.remove("active");
-    });
-    e.classList.add("active");
+const search = document.getElementById("search");
+const searchInput = document.querySelector("#search input");
+if (search) {
+  search.addEventListener("click", () => {
+    search.classList.add("active");
+    searchInput.focus();
   });
-});
+  searchInput.addEventListener("blur", () => {
+    search.classList.remove("active");
+  });
+}
+// let i = document.querySelectorAll(".i");
+
+// i.forEach((e) => {
+//   e.addEventListener("click", () => {
+//     i.forEach((e) => {
+//       e.classList.remove("active");
+//     });
+//     e.classList.add("active");
+//   });
+// });
 
 let passowrdsShowIcons = document.querySelectorAll("#passwordShow");
 if (passowrdsShowIcons) {

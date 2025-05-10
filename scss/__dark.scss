@@ -86,4 +86,11 @@
       background-color: #6e6e6e;
     }
   }
+  #search.active{
+    svg{
+      path{
+        fill: $active !important;
+      }
+    }
+  }
 }
