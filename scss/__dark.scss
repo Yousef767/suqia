@@ -1,6 +1,5 @@
-
 .dark {
-  background-color: #494949 ;
+  background-color: #494949;
   nav,
   .pageTitle,
   .navCont,
@@ -28,69 +27,89 @@
       color: #fff;
     }
   }
-  .fulltime{
+  .fulltime {
     border-color: #7c7c7c !important;
-    span{
-      &:nth-child(1){
-        span{
+    span {
+      &:nth-child(1) {
+        span {
           color: #fff;
         }
       }
     }
   }
-  .titName{
-    span{
-      &:nth-child(1){
+  .titName {
+    span {
+      &:nth-child(1) {
         color: #fff;
       }
-      &:nth-child(n + 2){
+      &:nth-child(n + 2) {
         color: #d3d3d3;
       }
-      &:last-child{
+      &:last-child {
         color: $active;
       }
     }
   }
-  .span{
+  .span {
     color: #fff;
   }
-  .nLinks{
-    li{
-      a,button{
+  .nLinks {
+    li {
+      a,
+      button {
         color: #fff;
-        svg{
-          path{
+        svg {
+          path {
             fill: #fff;
           }
         }
-        img{
+        img {
           filter: invert(1) saturate(0%) brightness(2);
         }
       }
     }
   }
-  .nLinks{
-    .nLink.active{
+  .nLinks {
+    .nLink.active {
       background-color: #6e6e6e;
     }
-    .red{
-      svg{
-        path{
+    .red {
+      svg {
+        path {
           fill: red;
         }
       }
     }
   }
-  .dropMenu{
-    .active{
+  .dropMenu {
+    .active {
       background-color: #6e6e6e;
     }
   }
-  #search.active{
-    svg{
-      path{
+  #search.active {
+    svg {
+      path {
         fill: $active !important;
       }
     }
+  }
+  .border2 {
+    border-color: #7c7c7c !important;
+  }
+  .message {
+    span {
+      background-color: $darkMode !important;
+    }
+  }
+  .tg {
+    tr {
+      td {
+        background-color: #bcbcbc;
+        border-color: #7c7c7c !important;
+      }
+    }
+  }
+  .paginationCont{
+      background-color: #bcbcbc;
   }
 }

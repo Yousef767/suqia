@@ -2018,6 +2018,7 @@ nav.nav {
   display: none;
 }
 .message {
+  
   width: 100%;
   @include flex();
   position: fixed;
@@ -2028,27 +2029,28 @@ nav.nav {
   justify-content: right;
   direction: ltr;
   span {
+    @extend .border2;
     font-weight: 500;
     @include flex();
     gap: 10px;
     i {
       font-size: 1.2rem;
-      color: #2a9703;
+      color: $green;
       padding-top: 3px;
     }
     padding: 12px 30px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px #00000033;
-    color: #2a9703;
+    // box-shadow: 0px 0px 10px #00000033;
+    color: $green;
     border-radius: 7px;
     text-transform: capitalize;
   }
 }
 .message.errorMessage {
   span {
-    color: #c31717;
+    color: $red;
     i {
-      color: #c31717;
+      color: $red;
     }
   }
 }

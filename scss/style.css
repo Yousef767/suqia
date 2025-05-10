@@ -1547,7 +1547,7 @@ nav.nav .logo span {
   background-color: #c7c7c8;
 }
 
-.border2 {
+.border2, .message span {
   border: 2px solid #e5e7eb;
 }
 
@@ -2101,22 +2101,21 @@ nav.nav .logo span {
   gap: 10px;
   padding: 12px 30px;
   background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: #2a9703;
+  color: #17C666;
   border-radius: 7px;
   text-transform: capitalize;
 }
 .message span i {
   font-size: 1.2rem;
-  color: #2a9703;
+  color: #17C666;
   padding-top: 3px;
 }
 
 .message.errorMessage span {
-  color: #c31717;
+  color: #EA4D4D;
 }
 .message.errorMessage span i {
-  color: #c31717;
+  color: #EA4D4D;
 }
 
 @keyframes showMessage {
@@ -2170,13 +2169,16 @@ nav.nav .logo span {
 .dark .span {
   color: #fff;
 }
-.dark .nLinks li a, .dark .nLinks li button {
+.dark .nLinks li a,
+.dark .nLinks li button {
   color: #fff;
 }
-.dark .nLinks li a svg path, .dark .nLinks li button svg path {
+.dark .nLinks li a svg path,
+.dark .nLinks li button svg path {
   fill: #fff;
 }
-.dark .nLinks li a img, .dark .nLinks li button img {
+.dark .nLinks li a img,
+.dark .nLinks li button img {
   filter: invert(1) saturate(0%) brightness(2);
 }
 .dark .nLinks .nLink.active {
@@ -2190,4 +2192,17 @@ nav.nav .logo span {
 }
 .dark #search.active svg path {
   fill: #008baa !important;
+}
+.dark .border2, .dark .message span, .message .dark span {
+  border-color: #7c7c7c !important;
+}
+.dark .message span {
+  background-color: #323232 !important;
+}
+.dark .tg tr td {
+  background-color: #bcbcbc;
+  border-color: #7c7c7c !important;
+}
+.dark .paginationCont {
+  background-color: #bcbcbc;
 }/*# sourceMappingURL=style.css.map */
