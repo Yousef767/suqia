@@ -478,6 +478,14 @@ nav.nav {
     padding: 7px 20px;
     border-bottom: 2px solid $gray;
     cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+      background-color: $main;
+      color: #fff;
+      img {
+        filter: invert(1) brightness(1000%);
+      }
+    }
     &:last-child {
       border: none;
     }
@@ -918,6 +926,9 @@ nav.nav {
     }
     &:nth-child(n + 2) {
       color: #212323;
+      a {
+        color: #212323;
+      }
     }
     &:last-child {
       color: $active;
@@ -2239,6 +2250,39 @@ nav.nav {
     transform: translate(0);
     position: absolute;
     left: 15px;
+  }
+}
+.sectionTitle{
+  padding-top: 20px;
+  span{
+    color: $active;
+    &:nth-child(1){
+      font-weight: 600;
+    }
+  }
+}
+.inputs2{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  @media (max-width:1300px) {
+    flex-wrap: wrap;
+  }
+  .input{
+    width: calc(100% / 4 );
+    @media (max-width:900px) {
+        width: calc(100% / 3 - 15px);
+    }
+    @media (max-width:700px) {
+        width: calc(100%);
+    }
+  }
+  .input2{
+    width: calc(35% + 30px);
+    @media (max-width:700px) {
+        width: calc(100%);
+    }
   }
 }
 @import "./_dark";

@@ -52,6 +52,9 @@
       }
       &:nth-child(n + 2) {
         color: #d3d3d3;
+        a{
+          color: #d3d3d3;
+        }
       }
       &:last-child {
         color: $active;
@@ -143,8 +146,8 @@
       }
     }
   }
-  .label{
-        background-color: #979797;
+  .label {
+    background-color: #979797;
   }
   .select2.active {
     svg {
@@ -160,9 +163,19 @@
       color: #fff;
     }
   }
-  .tg{
-    tr{
-      td{
+  .tg {
+    tr {
+      td {
+        color: #fff;
+      }
+    }
+  }
+  .custom-menu {
+    li {
+      background-color: #979797;
+      border-color: #7c7c7c;
+      &:hover {
+        background-color: $active;
         color: #fff;
       }
     }
