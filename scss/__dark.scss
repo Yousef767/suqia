@@ -52,7 +52,7 @@
       }
       &:nth-child(n + 2) {
         color: #d3d3d3;
-        a{
+        a {
           color: #d3d3d3;
         }
       }
@@ -177,6 +177,16 @@
       &:hover {
         background-color: $active;
         color: #fff;
+      }
+    }
+  }
+  .logoName {
+    img {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        display: block;
       }
     }
   }

@@ -24,7 +24,7 @@
       </div>
       <span class="span">الأقسام والصفحات</span>
       <ul class="nLinks">
-        <li><a class="nLink active" href="./home.html">
+        <li><a class="nLink" href="./home.html">
             <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M22.1576 8.29863L14.8887 1.34063C13.989 0.482103 12.7704 0 11.5 0C10.2296 0 9.01098 0.482103 8.11134 1.34063L0.842386 8.29863C0.57446 8.55342 0.362041 8.85657 0.21744 9.19052C0.0728402 9.52446 -0.00106413 9.88256 1.15762e-05 10.244V19.2484C1.15762e-05 19.9781 0.302912 20.678 0.842079 21.1941C1.38125 21.7101 2.11251 22 2.87501 22H20.125C20.8875 22 21.6188 21.7101 22.1579 21.1941C22.6971 20.678 23 19.9781 23 19.2484V10.244C23.0011 9.88256 22.9272 9.52446 22.7826 9.19052C22.638 8.85657 22.4255 8.55342 22.1576 8.29863ZM14.375 20.1656H8.625V16.5572C8.625 15.8275 8.9279 15.1276 9.46707 14.6115C10.0062 14.0955 10.7375 13.8056 11.5 13.8056C12.2625 13.8056 12.9938 14.0955 13.5329 14.6115C14.0721 15.1276 14.375 15.8275 14.375 16.5572V20.1656ZM21.0833 19.2484C21.0833 19.4916 20.9824 19.7249 20.8026 19.8969C20.6229 20.0689 20.3792 20.1656 20.125 20.1656H16.2917V16.5572C16.2917 15.3409 15.7868 14.1744 14.8882 13.3144C13.9896 12.4543 12.7708 11.9712 11.5 11.9712C10.2292 11.9712 9.01039 12.4543 8.11178 13.3144C7.21317 14.1744 6.70834 15.3409 6.70834 16.5572V20.1656H2.87501C2.62084 20.1656 2.37709 20.0689 2.19737 19.8969C2.01764 19.7249 1.91668 19.4916 1.91668 19.2484V10.244C1.91756 10.001 2.01844 9.76799 2.19747 9.59557L9.46642 2.64032C10.0066 2.1257 10.7378 1.83679 11.5 1.83679C12.2622 1.83679 12.9934 2.1257 13.5336 2.64032L20.8025 9.59832C20.9809 9.77007 21.0817 10.0019 21.0833 10.244V19.2484Z"
@@ -292,10 +292,10 @@
             لوحة التحكم
             <img src="../media/icons/bar.svg" alt="">
           </span>
-          <span>الصفحة الرئيسية
+          <span>ادارة عمليات البيع
             <img src="../media/icons/arrowt.svg" alt="">
           </span>
-          <span>لوحة التحكم</span>
+          <span> تعديل عملية البيع</span>
         </div>
         <div class="fulltime">
           <span>
@@ -312,6 +312,172 @@
           </span>
         </div>
       </div>
+      <div class="pageCont">
+        <div class="conta p30">
+          <form class="form">
+            <div class="sectionTitle">
+              <span>القسم الأول :</span>
+              <span> بيانات المشروع</span>
+            </div>
+            <div class="inputs">
+              <div class="input">
+                <span> رقم البئر :</span>
+                <input type="number" placeholder="رقم البئر  ">
+              </div>
+              <div class="input">
+                <span>التاريخ :</span>
+                <div class="select">
+                  <input type="date" placeholder=" التاريخ">
+                  <i class="fa-regular fa-calendar-days"></i>
+                </div>
+              </div>
+              <div class="input">
+                <span> حالة المشروع :</span>
+                <div class="select">
+                  <select>
+                    <option value="null">حالة المشروع</option>
+                    <option value="1"> فعال</option>
+                    <option value="0"> متوقف</option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="input">
+                <span>اسم الخدمة :</span>
+                <input type="tel" placeholder="اسم الخدمة">
+              </div>
+              <div class="input">
+                <span> العملة (الدولة) :</span>
+                <div class="select">
+                  <select>
+                    <option value="null"> العملة (الدولة)</option>
+                    <option value="0"> دينار اردني (الاردن)</option>
+                    <option value="1"> ريال عماني (عمان)</option>
+                    <option value="2"> درهم اماراتي (الامارات)</option>
+                    <option value="3"> دولار امريكي (امريكا واوروبا)</option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="input">
+                <span>سعر الخدمة :</span>
+                <input type="number" placeholder=" سعر الخدمة ">
+              </div>
+              <div class="input">
+                <span>اسم المشروع :</span>
+                <input type="text" placeholder="اسم المشروع">
+              </div>
+              <div class="input">
+                <span> موقع المشروع :</span>
+                <div class="select">
+                  <select>
+                    <option value="null"> موقع المشروع </option>
+                    <option value="مصر">مصر</option>
+                    <option value="الهند">الهند</option>
+                    <option value="باكستان">باكستان</option>
+                    <option value="سيريلانكا">سيريلانكا</option>
+                    <option value="نيبال">نيبال</option>
+                    <option value="بنين">بنين</option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="input">
+                <span>ملاحظات “اختياري” :</span>
+                <input type="text" placeholder=" ملاحظات “اختياري” ">
+              </div>
+            </div>
+
+            <div class="sectionTitle">
+              <span> القسم الثاني :</span>
+              <span> بيانات العميل والدفع</span>
+            </div>
+            <div class="inputs">
+              <div class="input">
+                <span>اسم العميل :</span>
+                <input type="text" placeholder="اسم العميل" list="list">
+                <datalist id="list">
+                  <option value="اسم العميل 1">اسم العميل 1</option>
+                  <option value="اسم العميل 2">اسم العميل 2</option>
+                </datalist>
+              </div>
+              <div class="input">
+                <span>رقم الهاتف “مع الرمز الدولي” :</span>
+                <input type="tel" placeholder="+962xxxxxxxxx">
+              </div>
+              <div class="input">
+                <span>البريد الإلكتروني :</span>
+                <input type="email" placeholder="البريد الإلكتروني ">
+              </div>
+
+              <div class="inputs2">
+                <div class="input input2">
+                  <span> طريقة استلام التقارير :</span>
+                  <div class="select">
+                    <select>
+                      <option value="null"> طريقة استلام التقارير </option>
+                    </select>
+                    <i class="fa-regular fa-angle-down"></i>
+                  </div>
+                </div>
+                <div class="input">
+                  <span>طريقة الدفع :</span>
+                  <div class="select">
+                    <select>
+                      <option value="null"> طريقة الدفع </option>
+                    </select>
+                    <i class="fa-regular fa-angle-down"></i>
+                  </div>
+                </div>
+                <div class="input">
+                  <span>هل يوجد مجسم :</span>
+                  <div class="select">
+                    <select>
+                      <option value="null"> هل يوجد مجسم </option>
+                      <option value="yes"> نعم</option>
+                      <option value="no"> لا</option>
+                    </select>
+                    <i class="fa-regular fa-angle-down"></i>
+                  </div>
+                </div>
+                <div class="input">
+                  <span>المبلغ المدفوع “لسند القبض” :</span>
+                  <input type="text" placeholder="مائة وسبعون دينارًا أردنيًا فقط لا غير">
+                </div>
+
+              </div>
+            </div>
+            <div class="sectionTitle">
+              <span>القسم الثالث :</span>
+              <span> بيانات ما بعد تنفيذ المشروع</span>
+            </div>
+            <div class="inputs self-start">
+              <div class="input">
+                <span>لوكيشن المشروع “url” :</span>
+                <input type="url" placeholder="لوكيشن المشروع “url”">
+              </div>
+              <div class="input labelImage w50">
+                <span>صورة الخدمة :</span>
+                <input type="file" accept="image/*" hidden id="file" multiple>
+                <label class="label" for="file">
+                  صورة الخدمة
+                  <img src="../media/icons/add-image.svg" alt="">
+                </label>
+                <div class="pImages pt20" id="imgcont">
+                  <div class="pImage">
+                    <img src="https://suqia.netlify.app/media/logo-name.png" alt="">
+                    <i class="fa-light fa-trash-can" data-name="product.png"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="saveBtn">
+              اضافة عملية البيع
+              <i class="fa-regular fa-circle-plus"></i>
+            </button>
+          </form>
+        </div>
+      </div>
 
       <!-- End Main Content -->
     </div>
@@ -319,6 +485,7 @@
   </div>
 </body>
 <script src="../js/main.js"></script>
+<script src="../js/images.js"></script>
 
 
 </html>

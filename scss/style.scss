@@ -676,6 +676,9 @@ nav.nav {
   background-color: #fff;
   img {
     width: 200px;
+    &:nth-child(2) {
+      display: none;
+    }
   }
 }
 .nImg {
@@ -1544,7 +1547,14 @@ nav.nav {
   background-color: $red;
   color: #fff;
 }
-
+.status-pending {
+  @extend .status;
+  background-color: $orange;
+  color: #fff;
+}
+.self-start {
+  align-items: flex-start;
+}
 .pageCont {
   width: 100%;
   display: flex;
@@ -2012,7 +2022,7 @@ nav.nav {
 }
 .pImage {
   position: relative;
-  width: 150px;
+  width: 100px;
   height: 100px;
   border-radius: 5px;
 }
@@ -2252,37 +2262,43 @@ nav.nav {
     left: 15px;
   }
 }
-.sectionTitle{
+.sectionTitle {
   padding-top: 20px;
-  span{
+  span {
     color: $active;
-    &:nth-child(1){
+    &:nth-child(1) {
       font-weight: 600;
     }
   }
 }
-.inputs2{
+.inputs2 {
   width: 100%;
   display: flex;
   align-items: flex-end;
   gap: 10px;
-  @media (max-width:1300px) {
+  @media (max-width: 1300px) {
     flex-wrap: wrap;
   }
-  .input{
-    width: calc(100% / 4 );
-    @media (max-width:900px) {
-        width: calc(100% / 3 - 15px);
+  .input {
+    width: calc(100% / 4);
+    @media (max-width: 900px) {
+      width: calc(100% / 3 - 15px);
     }
-    @media (max-width:700px) {
-        width: calc(100%);
+    @media (max-width: 700px) {
+      width: calc(100%);
     }
   }
-  .input2{
+  .input2 {
     width: calc(35% + 30px);
-    @media (max-width:700px) {
-        width: calc(100%);
+    @media (max-width: 700px) {
+      width: calc(100%);
     }
+  }
+}
+.w50 {
+  width: 50% !important;
+  @media (max-width: 700px) {
+    width: 100% !important;
   }
 }
 @import "./_dark";

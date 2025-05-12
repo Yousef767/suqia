@@ -710,6 +710,9 @@ nav.nav .logo span {
 .logoName img {
   width: 200px;
 }
+.logoName img:nth-child(2) {
+  display: none;
+}
 
 .nImg {
   width: 100%;
@@ -1549,7 +1552,7 @@ nav.nav .logo span {
   color: #EA4D4D;
 }
 
-.status, .status-inactive, .status-active {
+.status, .status-pending, .status-inactive, .status-active {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1571,6 +1574,15 @@ nav.nav .logo span {
 .status-inactive {
   background-color: #EA4D4D;
   color: #fff;
+}
+
+.status-pending {
+  background-color: #E9B300;
+  color: #fff;
+}
+
+.self-start {
+  align-items: flex-start;
 }
 
 .pageCont {
@@ -2068,7 +2080,7 @@ nav.nav .logo span {
 
 .pImage {
   position: relative;
-  width: 150px;
+  width: 100px;
   height: 100px;
   border-radius: 5px;
 }
@@ -2366,6 +2378,15 @@ nav.nav .logo span {
   }
 }
 
+.w50 {
+  width: 50% !important;
+}
+@media (max-width: 700px) {
+  .w50 {
+    width: 100% !important;
+  }
+}
+
 .dark {
   background-color: #494949;
 }
@@ -2499,4 +2520,10 @@ nav.nav .logo span {
 .dark .custom-menu li:hover {
   background-color: #049BB9;
   color: #fff;
+}
+.dark .logoName img:nth-child(1) {
+  display: none;
+}
+.dark .logoName img:nth-child(2) {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
