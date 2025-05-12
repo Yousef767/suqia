@@ -357,6 +357,21 @@ nav.nav .logo span {
   }
 }
 
+.col2 .input {
+  width: calc(50% - 15px);
+  flex-grow: 1;
+}
+@media (max-width: 900px) {
+  .col2 .input {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 700px) {
+  .col2 .input {
+    width: 100%;
+  }
+}
+
 .input {
   width: 100%;
   display: flex;
@@ -385,7 +400,6 @@ nav.nav .logo span {
   border-radius: 5px;
   font-size: 1em;
   text-align: right;
-  cursor: pointer;
 }
 .input input::-moz-placeholder, .input textarea::-moz-placeholder, .input select::-moz-placeholder, .input .selected-option::-moz-placeholder {
   color: #000000;
@@ -397,6 +411,9 @@ nav.nav .logo span {
 .input .selected-option::placeholder {
   color: #000000;
   opacity: 0.3;
+}
+.input .selected-option {
+  cursor: pointer;
 }
 .input textarea {
   height: 170px;
@@ -2059,6 +2076,7 @@ nav.nav .logo span {
   font-size: 1em;
   font-weight: 500;
   gap: 10px;
+  white-space: nowrap;
 }
 .btn i {
   color: #fff;

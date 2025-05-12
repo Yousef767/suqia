@@ -88,7 +88,7 @@
             </a>
           </div>
         </li>
-        <li class="drop active"><button class="nLink active">
+        <li class="drop"><button class="nLink">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_3524_474)">
                 <path
@@ -105,7 +105,7 @@
             <img src="../media/icons/menuarrow.svg" alt="">
           </button>
           <div class="dropMenu">
-            <a href="./customer-info.html" class="active">
+            <a href="./customer-info.html">
               <img src="../media/icons/c.svg" alt="">
               بيانات العملاء
             </a>
@@ -292,10 +292,12 @@
             لوحة التحكم
             <img src="../media/icons/bar.svg" alt="">
           </span>
-          <span> إدارة العملاء و التسويق
+          <span> ادارة المالية
             <img src="../media/icons/arrowt.svg" alt="">
           </span>
-          <span> بيانات العملاء</span>
+          <span>
+            تعديل حركة مالية
+          </span>
         </div>
         <div class="fulltime">
           <span>
@@ -314,93 +316,42 @@
       </div>
       <div class="pageCont">
         <div class="conta p30">
-          <div class="wbtns">
-            <button class="btn"> سحب اكسل شيت </button>
-            <form>
+          <form class="form">
+            <div class="inputs col2">
               <div class="input">
-                <div class="select select2">
-                  <input type="text" hidden>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_3524_689)">
-                      <path
-                        d="M24.0016 4V8C24.0016 9.65 22.6516 11 21.0016 11H17.0016C15.3516 11 14.0016 9.65 14.0016 8V4C14.0016 2.35 15.3516 1 17.0016 1H21.0016C22.6516 1 24.0016 2.35 24.0016 4ZM21.0016 15H19.0016C17.3516 15 16.0016 16.35 16.0016 18V20C16.0016 21.65 17.3516 23 19.0016 23H21.0016C22.6516 23 24.0016 21.65 24.0016 20V18C24.0016 16.35 22.6516 15 21.0016 15ZM10.3116 18.28L7.0016 21.43V1C7.0016 0.45 6.5516 0 6.0016 0C5.4516 0 5.0016 0.45 5.0016 1V21.43L1.6916 18.28C1.2916 17.9 0.661599 17.91 0.281599 18.31C-0.0984014 18.71 -0.0884014 19.34 0.311599 19.72L3.8816 23.12C4.4516 23.69 5.2016 24 6.0016 24C6.8016 24 7.5516 23.69 8.1016 23.14L11.6916 19.73C12.0916 19.35 12.1116 18.72 11.7216 18.32C11.3416 17.92 10.7116 17.9 10.3116 18.29V18.28Z"
-                        fill="#212323" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_3524_689">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <div class="selected-option">فرز البيانات</div>
-                  <ul class="custom-menu">
-                    <li data-value="client-country">
-                      <img src="../media/icons/c.svg" alt=""> دولة العميل
-                    </li>
-                    <li data-value="project-count">
-                      <img src="../media/icons/c.svg" alt=""> عدد المشاريع
-                    </li>
-                    <li data-value="total-payment-high-to-low">
-                      <img src="../media/icons/c.svg" alt=""> اجمالي الدفع (الأعلى الى الأقل)
-                    </li>
-                    <li data-value="total-profit-high-to-low">
-                      <img src="../media/icons/c.svg" alt=""> اجمالي الربح (الأعلى الى الأقل)
-                    </li>
-                  </ul>
-                  <i class="fa-regular fa-angle-left"></i>
+                <span>عنوان الحركة :</span>
+                <input type="text" placeholder="عنوان الحركة ">
+              </div>
+              <div class="input">
+                <span>نوع الحركة :</span>
+                <div class="select">
+                  <select>
+                    <option value="null"> نوع الحركة </option>
+                    <option value="incoming"> واردة</option>
+                    <option value="ioutcoming"> صادرة</option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
                 </div>
               </div>
               <div class="input">
-                <input type="search" placeholder="بحث عن...">
+                <span>تصنيف الحركة :</span>
+                <div class="select">
+                  <select>
+                    <option value="null"> تصنيف الحركة </option>
+                  </select>
+                  <i class="fa-regular fa-angle-down"></i>
+                </div>
               </div>
-              <button class="btn" type="submit">
-                ابحث
-                <i class="fa-regular fa-magnifying-glass"></i>
-              </button>
-            </form>
-          </div>
-          <div class="taIn">
-            <table class="tg">
-              <thead>
-                <tr>
-                  <th> #</th>
-                  <th>اسم العميل</th>
-                  <th>الدولة</th>
-                  <th>رقم الهاتف</th>
-                  <th>البريد الإلكتروني</th>
-                  <th>عدد المشاريع</th>
-                  <th>اجمالي الدفع</th>
-                  <th> اجمالي الربح</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>اسم العميل</td>
-                  <td>الاردن</td>
-                  <td>+962789651800</td>
-                  <td>ahmad@gmail.com</td>
-                  <td>3</td>
-                  <td>170 دينار</td>
-                  <td>100 دينار</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="paginationCont border2">
-            <div class="page">
-              عرض النتائج <span>1 - 10</span> من <span>50</span>
+              <div class="input">
+                <span> المبلغ :</span>
+                <input type="number" placeholder="المبلغ">
+              </div>
             </div>
-            <div class="paginations">
-              <ul class="spans">
-                <li><a href="##" class="page-link active">1</a></li>
-                <li><a href="##" class="page-link">2</a></li>
-                <li><a href="##" class="page-link">3</a></li>
-                <li><a href="##" class="page-link">...</a></li>
-                <li><a href="##" class="page-link">5</a></li>
-              </ul>
-            </div>
-          </div>
+            <button type="submit" class="saveBtn">
+            حفظ التعديلات
+              <i class="fa-light fa-floppy-disk"></i>
+            </button>
+          </form>
         </div>
       </div>
 
