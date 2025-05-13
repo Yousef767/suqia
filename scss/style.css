@@ -173,7 +173,7 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
   transition: 0.2s;
   background-color: #fff;
   z-index: 7;
@@ -389,7 +389,7 @@ nav.nav .logo span {
 .input select,
 .input .selected-option {
   width: 100%;
-  height: 45px;
+  height: 42px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -718,7 +718,7 @@ nav.nav .logo span {
   padding-top: 10px;
   width: 100%;
   border-bottom: 2px solid #e5e7eb;
-  min-height: 80px;
+  min-height: 70px;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -742,7 +742,7 @@ nav.nav .logo span {
 
 .span {
   width: 100%;
-  padding: 40px 20px 0 20px;
+  padding: 30px 20px 0 20px;
   color: #6b7280;
   font-size: 0.9rem;
 }
@@ -806,6 +806,7 @@ nav.nav .logo span {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 .fulltime span:nth-child(1) span {
   color: #6b7280;
@@ -944,6 +945,7 @@ nav.nav .logo span {
   align-items: center;
   gap: 10px;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 .titName span:nth-child(1) {
   font-weight: 700;
@@ -991,7 +993,7 @@ nav.nav .logo span {
 
 .pageTitle {
   width: 100%;
-  padding: 25px 20px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1460,13 +1462,13 @@ nav.nav .logo span {
 .tg {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 10px;
+  border-spacing: 0 5px;
 }
 .tg tbody {
-  font-size: 16px;
+  font-size: 14px;
 }
 .tg tbody tr td {
-  height: 55px;
+  height: 45px;
   padding: 0 10px;
   text-align: center !important;
   vertical-align: middle !important;
@@ -1515,10 +1517,10 @@ nav.nav .logo span {
 
 .tg th {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   overflow: hidden;
-  padding: 12px 20px;
+  height: 45px;
   text-transform: capitalize;
   white-space: nowrap;
   background-color: #049BB9;
@@ -1573,14 +1575,14 @@ nav.nav .logo span {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
+  height: 30px;
   border-radius: 15px;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   padding: 0 20px;
-  font-size: 0.9rem;
-  min-width: 90px;
+  font-size: 0.8rem;
+  min-width: 80px;
 }
 
 .status-active {
@@ -1627,7 +1629,7 @@ nav.nav .logo span {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: 45px;
   background-color: #fff;
   border-radius: 10px;
   padding-left: 20px;
@@ -1703,8 +1705,8 @@ nav.nav .logo span {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   background-color: #eef0f4;
   color: #000;
@@ -2052,7 +2054,7 @@ nav.nav .logo span {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 .wbtns form {
   display: flex;
@@ -2064,7 +2066,7 @@ nav.nav .logo span {
 }
 
 .btn {
-  height: 44px;
+  height: 40px;
   padding: 0 20px;
   border-radius: 5px;
   background-color: #049BB9;
@@ -2073,7 +2075,7 @@ nav.nav .logo span {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 500;
   gap: 10px;
   white-space: nowrap;
