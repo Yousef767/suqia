@@ -1057,11 +1057,11 @@ nav.nav {
   .navCont {
     display: flex;
     position: fixed;
-    top: 80px;
+    top: 70px;
     right: -100%;
     transition: 0.2s;
     z-index: 5;
-    height: calc(100dvh - 80px);
+    height: calc(100dvh - 70px);
     overflow-y: scroll;
     padding-top: 0;
     &::-webkit-scrollbar {
