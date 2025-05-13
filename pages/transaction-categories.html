@@ -125,7 +125,7 @@
               <img src="../media/icons/c.svg" alt="">
               إضافة حركة جديدة
             </a>
-            <a href="./transactions.html" >
+            <a href="./transactions.html">
               <img src="../media/icons/c.svg" alt="">
               الحركات المالية
             </a>
@@ -295,7 +295,7 @@
           <span> ادارة المالية
             <img src="../media/icons/arrowt.svg" alt="">
           </span>
-          <span>  تصنيفات الحركات المالية</span>
+          <span> تصنيفات الحركات المالية</span>
         </div>
         <div class="fulltime">
           <span>
@@ -330,28 +330,22 @@
                 <tr>
                   <th> #</th>
                   <th> اسم التصنيف</th>
-                  <th>نوع الحركة</th>
-                  <th>المبلغ</th>
-                  <th>تاريخ الحركة</th>
+                  <th>اجمالي الصادر</th>
+                  <th>اجمالي الوارد</th>
                   <th> العمليات </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td> عنوان الحركة</td>
-                  <td>
-                    <div class="status-active">
-                      واردة
-                    </div>
-                  </td>
+                  <td> اسم التصنيف</td>
                   <td>170 دينار</td>
-                  <td>25/04/2025</td>
+                  <td>270 دينار</td>
                   <td>
                     <div class="tools">
-                      <a class="a" href="edit-transaction.html">
+                      <button class="a" id="show-popUp">
                         <i class="fa-light fa-file-pen"></i>
-                      </a>
+                      </button>
                       <button class="a">
                         <i class="fa-light fa-trash-can"></i>
                       </button>
@@ -361,18 +355,13 @@
                 <tr>
                   <td>1</td>
                   <td> عنوان الحركة</td>
-                  <td>
-                    <div class="status-inactive">
-                      صادرة
-                    </div>
-                  </td>
                   <td>170 دينار</td>
-                  <td>25/04/2025</td>
+                  <td>270 دينار</td>
                   <td>
                     <div class="tools">
-                      <a class="a" href="edit-transaction.html">
+                      <button class="a" id="show-popUp">
                         <i class="fa-light fa-file-pen"></i>
-                      </a>
+                      </button>
                       <button class="a">
                         <i class="fa-light fa-trash-can"></i>
                       </button>
@@ -403,8 +392,27 @@
     </div>
 
   </div>
+
+
+  <div class="popUp" id="popUp">
+    <form class="form w430">
+      <div class="input">
+        <span>اسم التصنيف :</span>
+        <input type="text" placeholder="اسم التصنيف ">
+      </div>
+      <button class="saveBtn" type="submit">
+        حفظ التعديلات
+        <i class="fa-light fa-floppy-disk"></i>
+      </button>
+    </form>
+    <i class="fa-regular fa-x" id="close"></i>
+  </div>
+
+
+
 </body>
 <script src="../js/main.js"></script>
+<script src="../js/popUp.js"></script>
 
 
 </html>

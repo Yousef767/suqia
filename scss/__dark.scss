@@ -140,6 +140,7 @@
     select,
     .selected-option {
       background-color: #979797;
+      // color: #fff;
       &::placeholder {
         color: #fff;
         opacity: 0.8;
@@ -189,5 +190,13 @@
         display: block;
       }
     }
+  }
+  .popUp{
+    .form{
+  background-color: #494949;
+    }
+  }
+  .page{
+    color: #fff;
   }
 }

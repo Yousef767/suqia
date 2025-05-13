@@ -764,7 +764,7 @@ nav.nav {
     direction: ltr;
     @include flex();
     font-weight: 600;
-    font-size: .9rem;
+    font-size: 0.9rem;
     &:nth-child(1) {
       span {
         color: #6b7280;
@@ -938,7 +938,7 @@ nav.nav {
     align-items: center;
     gap: 10px;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: 0.9rem;
     &:nth-child(1) {
       font-weight: 700;
       color: #000;
@@ -1383,9 +1383,9 @@ nav.nav {
   @include noBorder();
   background-color: $active;
   color: #fff;
-  height: 45px;
+  height: 42px;
   padding: 0 30px;
-  font-size: 1em;
+  font-size: .9rem;
   border-radius: 10px;
   font-weight: 600;
   gap: 10px;
@@ -2015,7 +2015,7 @@ nav.nav {
   color: #fff;
   @include flex();
   cursor: pointer;
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: 500;
   gap: 10px;
   white-space: nowrap;
@@ -2101,6 +2101,13 @@ nav.nav {
   backdrop-filter: blur(15px);
   .form {
     z-index: 12;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    @media (max-width: 500px) {
+      padding: 30px 20px;
+      border-radius: 7px;
+    }
   }
 }
 
