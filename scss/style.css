@@ -1570,6 +1570,14 @@ nav.nav .logo span {
 .tools .a .fa-trash-can {
   color: #EA4D4D;
 }
+.tools .print {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #049BB9;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
 
 .status, .status-pending, .status-inactive, .status-active {
   display: flex;

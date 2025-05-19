@@ -33,7 +33,7 @@
 
             الصفحة الرئيسية
           </a></li>
-        <li class="drop active"><button class="nLink active">
+        <li class="drop"><button class="nLink">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_3524_460)">
                 <path
@@ -50,7 +50,7 @@
             <img src="../media/icons/menuarrow.svg" alt="">
           </button>
           <div class="dropMenu">
-            <a href="./contractor-and-cost-management.html" class="active">
+            <a href="./contractor-and-cost-management.html">
               <img src="../media/icons/c.svg" alt="">
               إدارة المقاولين و التكاليف
             </a>
@@ -135,7 +135,7 @@
             </a>
           </div>
         </li>
-        <li class="drop"><button class="nLink">
+        <li class="drop active"><button class="nLink active">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_3524_487)">
                 <path
@@ -151,8 +151,8 @@
             طباعة النماذج
             <img src="../media/icons/menuarrow.svg" alt="">
           </button>
-        <div class="dropMenu">
-            <a href="contracts.html">
+          <div class="dropMenu">
+            <a href="contracts.html" class="active">
               <img src="../media/icons/c.svg" alt="">
               عقد تنفيذ
             </a>
@@ -292,14 +292,10 @@
             لوحة التحكم
             <img src="../media/icons/bar.svg" alt="">
           </span>
-          <span>إدارة الخدمات
+          <span>  طباعة النماذج
             <img src="../media/icons/arrowt.svg" alt="">
           </span>
-          <span>
-            <a href="contractor-and-cost-management.html">إدارة المقاولين و التكاليف</a>
-            <img src="../media/icons/arrowt.svg" alt="">
-          </span>
-          <span> إضافة مقاول جديد</span>
+          <span>   عقد تنفيذ</span>
         </div>
         <div class="fulltime">
           <span>
@@ -318,55 +314,59 @@
       </div>
       <div class="pageCont">
         <div class="conta p30">
-          <form class="form">
-            <div class="inputs">
+          <div class="wbtns">
+            <form>
               <div class="input">
-                <span>اسم المقاول :</span>
-                <input type="text" placeholder="اسم المقاول">
+                <input type="number" placeholder="ادخل رقم المشروع">
               </div>
-              <div class="input">
-                <span> تاريخ التعاقد :</span>
-                <div class="select">
-                  <input type="date" placeholder="تاريخ التعاقد  ">
-                  <i class="fa-regular fa-calendar-days"></i>
-                </div>
-              </div>
-              <div class="input">
-                <span> رقم الهاتف “اختياري” :</span>
-                <input type="tel" placeholder=" رقم الهاتف “اختياري” ">
-              </div>
-              <div class="input">
-                <span> حالة المقاول :</span>
-                <div class="select">
-                  <select>
-                    <option value="null">حالة المقاول</option>
-                    <option value="1"> فعال</option>
-                    <option value="0"> متوقف</option>
-                  </select>
-                  <i class="fa-regular fa-angle-down"></i>
-                </div>
-              </div>
-              <div class="input">
-                <span> دولة المقاول :</span>
-                <div class="select">
-                  <select>
-                    <option value="null">دولة المقاول</option>
-                    <option value="مصر">مصر</option>
-                    <option value="الهند">الهند</option>
-                    <option value="باكستان">باكستان</option>
-                    <option value="سيريلانكا">سيريلانكا</option>
-                    <option value="نيبال">نيبال</option>
-                    <option value="بنين">بنين</option>
-                  </select>
-                  <i class="fa-regular fa-angle-down"></i>
-                </div>
-              </div>
-            </div>
-            <button type="submit" class="saveBtn">
-              إضافة المقاول
-              <i class="fa-regular fa-circle-plus"></i>
-            </button>
-          </form>
+              <button class="btn" type="submit">
+                استعلام <i class="fa-regular fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+          <div class="taIn">
+            <table class="tg">
+              <thead>
+                <tr>
+                  <th> #</th>
+                  <th>حالة المشروع</th>
+                  <th>اسم العميل</th>
+                  <th>الدولة</th>
+                  <th>رقم الهاتف</th>
+                  <th>اسم الخدمة</th>
+                  <th>سعر الخدمة</th>
+                  <th>الربح</th>
+                  <th>موقع المشروع</th>
+                  <th> العمليات </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>112</td>
+                  <td>
+                    <div class="status-inactive">
+                      معلق
+                    </div>
+                  </td>
+                  <td>اسم العميل</td>
+                  <td>الاردن</td>
+                  <td>+962789651800</td>
+                  <td>اسم الخدمة</td>
+                  <td>170 دينار</td>
+                  <td>100 دينار</td>
+                  <td>باكستان</td>
+                  <td>
+                    <div class="tools">
+                      <button class="a print">
+                        طباعة
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
 
@@ -374,8 +374,13 @@
     </div>
 
   </div>
+
+
+
+
+
+
 </body>
 <script src="../js/main.js"></script>
-
 
 </html>
