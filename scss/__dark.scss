@@ -191,12 +191,64 @@
       }
     }
   }
-  .popUp{
-    .form{
-  background-color: #494949;
+  .popUp {
+    .form {
+      background-color: #494949;
     }
   }
-  .page{
+  .page {
     color: #fff;
+  }
+  .login {
+    background-color: #717171;
+    h2 {
+      color: #fff;
+    }
+  }
+  .chart {
+      background-color: #848484;
+
+    .chartHeader {
+      h2 {
+        color: #fff;
+      }
+    }
+  }
+  .chart-legend li {
+    color: white !important;
+  }
+  .filter button {
+    background-color: #b4b4b4;
+    color: #fff;
+    border: 1px solid #444;
+    border-color: #7c7c7c;
+    i{
+      color: #fff;
+      
+    }
+    img{
+      filter: brightness(0) invert(1);
+    }
+  }
+  .itm{
+      background-color: #848484;
+      span{
+        color: #fff;
+        opacity: .8;
+      }
+      img{
+      filter: brightness(0) invert(1);
+    }
+    h1{
+      color: $dark-main;
+    }
+  }
+  .filterInputs{
+    background-color: #616161;
+    label{color: #fff;}
+
+    input{
+      background-color: #b4b4b4;color: #fff;
+    }
   }
 }

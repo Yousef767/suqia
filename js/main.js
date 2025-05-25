@@ -18,9 +18,13 @@ const message = (message, isError) => {
 let menuBtn = document.getElementById("menu");
 let dcont = document.querySelector('.dcont');
 
-menuBtn.addEventListener("click", () => {
-  dcont.classList.toggle("showNavLinks");
-});
+if(menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    dcont.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+  });
+}
+
 const drop = document.querySelectorAll(".drop");
 drop.forEach((e) => {
   e.addEventListener("click", () => {

@@ -151,7 +151,7 @@
             طباعة النماذج
             <img src="../media/icons/menuarrow.svg" alt="">
           </button>
-        <div class="dropMenu">
+          <div class="dropMenu">
             <a href="contracts.html">
               <img src="../media/icons/c.svg" alt="">
               عقد تنفيذ
@@ -313,12 +313,101 @@
         </div>
       </div>
 
+
+      <div class="charts">
+        <!-- Line Chart -->
+        <div class="chart">
+          <div class="chartHeader">
+            <h2>المبيعات مقابل الأيام</h2>
+            <div class="filter">
+              <button onclick="toggleFilter('filter1')" >
+                <img src="../media/icons/filter.svg" alt="">
+                فلترة
+                <i class="fa-regular fa-angle-left"></i>
+              </button>
+              <div id="filter1" class="filterInputs">
+                <label>من: <input type="date" /></label>
+                <label>إلى: <input type="date" /></label>
+              </div>
+            </div>
+          </div>
+          <canvas id="salesChart"></canvas>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="chart">
+          <div class="chartHeader">
+            <h2>المشاريع الأكثر مبيعاً</h2>
+            <div class="filter">
+              <button onclick="toggleFilter('filter2')">
+                <img src="../media/icons/filter.svg" alt="">
+                فلترة
+                <i class="fa-regular fa-angle-left"></i>
+              </button>
+              <div id="filter2" class="filterInputs">
+                <label>من: <input type="date" /></label>
+                <label>إلى: <input type="date" /></label>
+              </div>
+            </div>
+          </div>
+          <canvas id="projectChart"></canvas>
+        </div>
+      </div>
+
+
+
+      <div class="cards">
+        <div class="itm">
+          <img src="../media/icons/project.png" alt="">
+          <span>عدد المشاريع المنفذة</span>
+          <h1>378</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/project.png" alt="">
+          <span>عدد المشاريع بالإنتظار</span>
+          <h1>370</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/cont.png" alt="">
+          <span>عدد المقاولين</span>
+          <h1>535</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/cart.png" alt="">
+          <span>اجمالي عمليات البيع</span>
+          <h1>535</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/in.png" alt="">
+          <span> اجمالي المدفوعات</span>
+          <h1>535</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/out.png" alt="">
+          <span> اجمالي التكاليف</span>
+          <h1>535</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/profit.png" alt="">
+          <span> صافي الربح</span>
+          <h1>535</h1>
+        </div>
+        <div class="itm">
+          <img src="../media/icons/clients.png" alt="">
+          <span> اجمالي العملاء</span>
+          <h1>535</h1>
+        </div>
+      </div>
       <!-- End Main Content -->
     </div>
 
   </div>
 </body>
 <script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/charts.js">
 
+
+</script>
 
 </html>

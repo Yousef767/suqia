@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
-
+// @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 @import "./_vars";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", sans-serif;
   color: $black;
 }
 
@@ -278,16 +278,24 @@ nav.nav {
 }
 
 .login {
-  width: 400px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
-  padding: 40px;
+  padding: 60px 40px;
   margin-top: 40px;
+
+  background: #ffffff;
+  border: 2px solid #049bb9;
+  box-shadow: 0px 4px 14.2px rgba(0, 0, 0, 0.25);
+  border-radius: 27px;
+  @media (max-width: 600px) {
+    width: calc(100% - 40px);
+  }
   img {
-    width: 150px;
+    width: 80px;
   }
   .form {
     width: 100%;
@@ -298,13 +306,15 @@ nav.nav {
     button {
       @include flex();
       height: 40px;
-      padding: 0 30px;
+      padding: 0 60px;
       @include noBorder();
       background-color: $main;
       color: #fff;
       border-radius: 5px;
       cursor: pointer;
       transition: 0.2s;
+      font-weight: 600;
+      font-size: 0.95rem;
       &:hover {
         background-color: $dark-main;
       }
@@ -315,7 +325,7 @@ nav.nav {
     text-align: center;
     color: $black;
     padding: 10px 0;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 .dont {
@@ -515,7 +525,6 @@ nav.nav {
 }
 @media (max-width: 410px) {
   .login {
-    width: 100%;
     padding: 30px 30px 40px 30px;
   }
 }
@@ -1297,6 +1306,8 @@ nav.nav {
   flex-direction: column;
   border-radius: 15px;
   background-color: #fff;
+  box-shadow: 0px 20px 100px rgba(85, 85, 85, 0.08);
+
   .bb {
     z-index: 5;
   }
@@ -1385,7 +1396,7 @@ nav.nav {
   color: #fff;
   height: 42px;
   padding: 0 30px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border-radius: 10px;
   font-weight: 600;
   gap: 10px;
@@ -1449,7 +1460,7 @@ nav.nav {
         background-color: #fff;
         white-space: nowrap !important;
         border: 2px solid $gray;
-        font-weight: 600;
+        font-weight: 500;
         &:nth-child(n + 1) {
           border-right: none;
           border-left: none;
@@ -1501,7 +1512,7 @@ nav.nav {
   text-transform: capitalize;
   white-space: nowrap;
   background-color: $active;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
   &:first-child {
     border-radius: 0 10px 10px 0;
@@ -1541,9 +1552,9 @@ nav.nav {
       color: $red;
     }
   }
-  .print{
+  .print {
     color: #fff;
-    font-size: .9rem;
+    font-size: 0.9rem;
     background-color: $active;
     border-radius: 20px;
     padding: 0 20px;
@@ -2336,5 +2347,172 @@ nav.nav {
   @media (max-width: 700px) {
     width: 100% !important;
   }
+}
+.authpage {
+  .navCont {
+    height: 70px;
+    @media (max-width: 1100px) {
+      right: 0;
+      width: 300px;
+      top: 0;
+      z-index: 15;
+    }
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  .mainCont {
+    width: 100%;
+  }
+  .nav {
+    width: calc(100% - 300px);
+    margin-right: auto;
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
+  }
+}
+.authform {
+  width: 100%;
+  @include flex();
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  min-height: 100dvh;
+  .login {
+    position: absolute;
+    top: 50px;
+  }
+}
+.authimage {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-bottom: 5px solid $main;
+  @media (max-width: 800px) {
+    height: 300px;
+  }
+  @media (max-width: 500px) {
+    height: 230px;
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.cards {
+  width: 100%;
+  @include flex();
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.charts {
+  width: 100%;
+  @include flex();
+  gap: 15px;
+  padding: 15px 15px 0 15px;
+}
+.chart {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 50%;
+
+  h2 {
+    font-size: 1rem;
+    padding-bottom: 7px;
+  }
+  canvas {
+    width: 100% !important;
+    height: 200px !important;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 900px) {
+  .charts {
+    flex-direction: column;
+  }
+  .chart {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .chart {
+    padding: 20px;
+  }
+}
+#salesChart {
+  width: 100% !important;
+}
+
+#projectChart {
+  width: 230px !important;
+}
+
+.chartHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter {
+  position: relative;
+}
+.filter button {
+  @include flex();
+  width: 120px;
+  height: 40px;
+  justify-content: right;
+  gap: 5px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #b3b3b3;
+  font-size: 1rem;
+  padding-right: 10px;
+  i {
+    position: absolute;
+    left: 10px;
+    transition: 0.3s all ease;
+    font-size: 0.8rem;
+  }
+}
+.filter.active .filterInputs {
+  display: flex;
+}
+.filter.active button {
+  i {
+    transform: rotate(-90deg);
+  }
+}
+.filterInputs {
+  display: none;
+  position: absolute;
+  top: 50px !important;
+  background: white;
+  padding: 10px;
+  left: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+}
+.filterInputs input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 150px;
+  border-radius: 5px;text-align: right;
+  background-color: $gray;
+;
 }
 @import "./_dark";

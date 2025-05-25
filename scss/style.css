@@ -1,10 +1,10 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", sans-serif;
   color: #212323;
 }
 
@@ -274,17 +274,26 @@ nav.nav .logo span {
 }
 
 .login {
-  width: 400px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
-  padding: 40px;
+  padding: 60px 40px;
   margin-top: 40px;
+  background: #ffffff;
+  border: 2px solid #049bb9;
+  box-shadow: 0px 4px 14.2px rgba(0, 0, 0, 0.25);
+  border-radius: 27px;
+}
+@media (max-width: 600px) {
+  .login {
+    width: calc(100% - 40px);
+  }
 }
 .login img {
-  width: 150px;
+  width: 80px;
 }
 .login .form {
   width: 100%;
@@ -298,7 +307,7 @@ nav.nav .logo span {
   justify-content: center;
   align-items: center;
   height: 40px;
-  padding: 0 30px;
+  padding: 0 60px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -307,6 +316,8 @@ nav.nav .logo span {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 .login .form button:hover {
   background-color: #02758d;
@@ -316,7 +327,7 @@ nav.nav .logo span {
   text-align: center;
   color: #212323;
   padding: 10px 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .dont {
@@ -534,7 +545,6 @@ nav.nav .logo span {
 }
 @media (max-width: 410px) {
   .login {
-    width: 100%;
     padding: 30px 30px 40px 30px;
   }
 }
@@ -1310,6 +1320,7 @@ nav.nav .logo span {
   flex-direction: column;
   border-radius: 15px;
   background-color: #fff;
+  box-shadow: 0px 20px 100px rgba(85, 85, 85, 0.08);
 }
 .itm .bb {
   z-index: 5;
@@ -1475,7 +1486,7 @@ nav.nav .logo span {
   background-color: #fff;
   white-space: nowrap !important;
   border: 2px solid #e5e7eb;
-  font-weight: 600;
+  font-weight: 500;
 }
 .tg tbody tr td:nth-child(n+1) {
   border-right: none;
@@ -1524,7 +1535,7 @@ nav.nav .logo span {
   text-transform: capitalize;
   white-space: nowrap;
   background-color: #049BB9;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
 }
 .tg th:first-child {
@@ -2432,6 +2443,199 @@ nav.nav .logo span {
   }
 }
 
+.authpage .navCont {
+  height: 70px;
+}
+@media (max-width: 1100px) {
+  .authpage .navCont {
+    right: 0;
+    width: 300px;
+    top: 0;
+    z-index: 15;
+  }
+}
+@media (max-width: 500px) {
+  .authpage .navCont {
+    display: none;
+  }
+}
+.authpage .mainCont {
+  width: 100%;
+}
+.authpage .nav {
+  width: calc(100% - 300px);
+  margin-right: auto;
+}
+@media (max-width: 1100px) {
+  .authpage .nav {
+    width: 100%;
+  }
+}
+
+.authform {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  min-height: 100dvh;
+}
+.authform .login {
+  position: absolute;
+  top: 50px;
+}
+
+.authimage {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-bottom: 5px solid #049BB9;
+}
+@media (max-width: 800px) {
+  .authimage {
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .authimage {
+    height: 230px;
+  }
+}
+.authimage img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.charts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 15px 0 15px;
+}
+
+.chart {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 50%;
+}
+.chart h2 {
+  font-size: 1rem;
+  padding-bottom: 7px;
+}
+.chart canvas {
+  width: 100% !important;
+  height: 200px !important;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .charts {
+    flex-direction: column;
+  }
+  .chart {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .chart {
+    padding: 20px;
+  }
+}
+#salesChart {
+  width: 100% !important;
+}
+
+#projectChart {
+  width: 230px !important;
+}
+
+.chartHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter {
+  position: relative;
+}
+
+.filter button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  justify-content: right;
+  gap: 5px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #b3b3b3;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+.filter button i {
+  position: absolute;
+  left: 10px;
+  transition: 0.3s all ease;
+  font-size: 0.8rem;
+}
+
+.filter.active .filterInputs {
+  display: flex;
+}
+
+.filter.active button i {
+  transform: rotate(-90deg);
+}
+
+.filterInputs {
+  display: none;
+  position: absolute;
+  top: 50px !important;
+  background: white;
+  padding: 10px;
+  left: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+}
+
+.filterInputs input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 150px;
+  border-radius: 5px;
+  text-align: right;
+  background-color: #e5e7eb;
+}
+
 .dark {
   background-color: #494949;
 }
@@ -2576,5 +2780,55 @@ nav.nav .logo span {
   background-color: #494949;
 }
 .dark .page {
+  color: #fff;
+}
+.dark .login {
+  background-color: #717171;
+}
+.dark .login h2 {
+  color: #fff;
+}
+.dark .chart {
+  background-color: #848484;
+}
+.dark .chart .chartHeader h2 {
+  color: #fff;
+}
+.dark .chart-legend li {
+  color: white !important;
+}
+.dark .filter button {
+  background-color: #b4b4b4;
+  color: #fff;
+  border: 1px solid #444;
+  border-color: #7c7c7c;
+}
+.dark .filter button i {
+  color: #fff;
+}
+.dark .filter button img {
+  filter: brightness(0) invert(1);
+}
+.dark .itm {
+  background-color: #848484;
+}
+.dark .itm span {
+  color: #fff;
+  opacity: 0.8;
+}
+.dark .itm img {
+  filter: brightness(0) invert(1);
+}
+.dark .itm h1 {
+  color: #02758d;
+}
+.dark .filterInputs {
+  background-color: #616161;
+}
+.dark .filterInputs label {
+  color: #fff;
+}
+.dark .filterInputs input {
+  background-color: #b4b4b4;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */
