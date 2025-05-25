@@ -2427,7 +2427,7 @@ nav.nav {
   }
   canvas {
     width: 100% !important;
-    height: 200px !important;
+    height: 230px !important;
     margin: 10px auto 0 auto !important;
   }
 }
@@ -2444,12 +2444,14 @@ nav.nav {
     padding: 20px;
   }
 }
+
 #salesChart {
+  max-width: 500px !important;
   width: 100% !important;
 }
 
 #projectChart {
-  width: 230px !important;
+  width: 240px !important;
 }
 
 .chartHeader {

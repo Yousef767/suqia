@@ -24,7 +24,12 @@ const salesChart = new Chart(salesCtx, {
         backgroundColor: "rgba(4, 155, 185, 0.265)",
         tension: 0.4,
         fill: true,
-        pointRadius: 0,
+        pointRadius: 6, // Hide points normally
+        pointHoverRadius: 6, // Circle on hover
+        pointHitRadius: 20, // Easier to hover
+        pointHoverBackgroundColor: "#049BB9",
+        pointHoverBorderColor: "#fff",
+        pointHoverBorderWidth: 2,
       },
     ],
   },
@@ -32,29 +37,29 @@ const salesChart = new Chart(salesCtx, {
     responsive: true,
     plugins: {
       legend: {
-        display: false
-      }
+        display: false,
+      },
     },
     scales: {
       x: {
         ticks: {
-          color: '#000' // لون الأيام
+          color: "#000",
         },
         grid: {
-          color: '#e5e7eb' // لون خطوط الشبكة الأفقيّة (اختياري)
-        }
+          color: "#e5e7eb",
+        },
       },
       y: {
         beginAtZero: true,
         ticks: {
-          color: '#000' // لون الأرقام
+          color: "#000",
         },
         grid: {
-          color: '#e5e7eb' // لون خطوط الشبكة العموديّة (اختياري)
-        }
-      }
-    }
-  }
+          color: "#e5e7eb",
+        },
+      },
+    },
+  },
 });
 
 // Pie Chart

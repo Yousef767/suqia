@@ -16,14 +16,14 @@ const message = (message, isError) => {
 };
 
 let menuBtn = document.getElementById("menu");
-let dcont = document.querySelector('.dcont');
+let dcont = document.querySelector(".dcont");
 
 if(menuBtn) {
   menuBtn.addEventListener("click", () => {
-    dcont.classList.toggle("active");
-    menuBtn.classList.toggle("active");
-  });
+  dcont.classList.toggle("showNavLinks");
+});
 }
+
 
 const drop = document.querySelectorAll(".drop");
 drop.forEach((e) => {
