@@ -2543,7 +2543,7 @@ nav.nav .logo span {
 .chart canvas {
   width: 100% !important;
   height: 200px !important;
-  margin: 0 auto;
+  margin: 10px auto 0 auto !important;
 }
 
 @media (max-width: 900px) {
