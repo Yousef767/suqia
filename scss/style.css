@@ -2784,6 +2784,17 @@ nav.nav .logo span {
   background-color: #fff;
 }
 
+#notification2 .nMenu {
+  padding: 0;
+}
+#notification2 .nMenu a {
+  transition: 0.2s all ease;
+  padding: 10px;
+}
+#notification2 .nMenu a:hover {
+  background-color: #ccc;
+}
+
 .langMenu {
   width: 150px;
   padding: 10px 20px;
@@ -2942,7 +2953,8 @@ nav.nav .logo span {
   color: #fff !important;
   opacity: 1;
 }
-.dark .input .select img, .dark .input .select svg {
+.dark .input .select img,
+.dark .input .select svg {
   filter: invert(1) brightness(2);
 }
 .dark .tg tr td {
@@ -3051,4 +3063,7 @@ nav.nav .logo span {
 }
 .dark .nMenu.notification .isRead .daten {
   color: #049BB9;
+}
+.dark #notification2 .nMenu a:hover {
+  background-color: #b4b4b4;
 }/*# sourceMappingURL=style.css.map */

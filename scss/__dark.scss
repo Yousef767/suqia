@@ -181,8 +181,9 @@
         color: #fff !important;
         opacity: 1;
       }
-      img,svg {
-        filter: invert(1) brightness(2) ;
+      img,
+      svg {
+        filter: invert(1) brightness(2);
       }
     }
   }
@@ -285,31 +286,40 @@
       border-color: #7c7c7c !important;
     }
   }
-  .nMenu{
+  .nMenu {
     background-color: #6e6e6e;
-    p{
+    p {
       color: #fff;
     }
   }
-  .nMenu.notification{
+  .nMenu.notification {
     background-color: #6e6e6e;
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
       background-color: $dark-main;
     }
-    p{
+    p {
       color: #fff;
     }
-    a{
+    a {
       background-color: #8d8d8d;
     }
-    .daten{
+    .daten {
       color: $dark-main;
     }
-    .isRead{
+    .isRead {
       background-color: transparent;
-      .daten{
+      .daten {
         color: $active;
       }
     }
   }
+  #notification2 {
+  .nMenu {
+    a {
+      &:hover {
+        background-color: #b4b4b4;
+      }
+    }
+  }
+}
 }

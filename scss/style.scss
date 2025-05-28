@@ -2656,6 +2656,18 @@ nav.nav {
     background-color: #fff;
   }
 }
+#notification2 {
+  .nMenu {
+    padding: 0;
+    a {
+      transition: 0.2s all ease;
+      padding: 10px;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+}
 .langMenu {
   width: 150px;
   padding: 10px 20px;
