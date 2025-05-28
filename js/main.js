@@ -27,6 +27,66 @@ if (menuBtn) {
     dcont.classList.toggle("showNavLinks");
   });
 }
+let lang = document.getElementById("lang");
+let langMenu = document.getElementById("langMenu");
+let notification = document.getElementById("notification");
+let notificationMenu = document.getElementById("notificationMenu");
+let notification2 = document.getElementById("notification2");
+let notificationMenu2 = document.getElementById("notificationMenu2");
+
+if (notification) {
+  notification.addEventListener("click", () => {
+    lang?.classList.remove("active");
+    notification2?.classList.remove("active");
+    notification.classList.toggle("active");
+  });
+}
+
+if (notification2) {
+  notification2.addEventListener("click", () => {
+    lang?.classList.remove("active");
+    notification?.classList.remove("active");
+    notification2.classList.toggle("active");
+  });
+}
+
+if (lang) {
+  lang.addEventListener("click", () => {
+    lang.classList.toggle("active");
+    notification?.classList.remove("active");
+    notification2?.classList.remove("active");
+  });
+}
+
+window.addEventListener("click", (e) => {
+  if (
+    notification &&
+    notificationMenu &&
+    !notification.contains(e.target) &&
+    !notificationMenu.contains(e.target)
+  ) {
+    notification.classList.remove("active");
+  }
+
+  if (
+    notification2 &&
+    notificationMenu2 &&
+    !notification2.contains(e.target) &&
+    !notificationMenu2.contains(e.target)
+  ) {
+    notification2.classList.remove("active");
+  }
+
+  if (
+    lang &&
+    langMenu &&
+    !lang.contains(e.target) &&
+    !langMenu.contains(e.target)
+  ) {
+    lang.classList.remove("active");
+  }
+});
+
 
 const drop = document.querySelectorAll(".drop");
 drop.forEach((e) => {

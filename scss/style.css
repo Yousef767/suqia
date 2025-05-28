@@ -1623,6 +1623,7 @@ nav.nav .logo span {
   padding: 0 20px;
   font-size: 0.8rem;
   min-width: 80px;
+  white-space: nowrap;
 }
 
 .status-active {
@@ -2692,6 +2693,114 @@ nav.nav .logo span {
   color: #fff;
 }
 
+.nMenu {
+  position: absolute;
+  top: calc(100% + 20px);
+  width: 300px;
+  padding: 15px 20px 15px 10px;
+  left: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: scroll;
+  opacity: 0;
+  height: 0;
+  transition: 0.2s all ease;
+}
+.nMenu::-webkit-scrollbar {
+  width: 5px;
+}
+.nMenu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nMenu::-webkit-scrollbar-thumb {
+  background: #049BB9;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .nMenu {
+    position: fixed;
+    width: calc(100% - 40px);
+    left: 20px;
+    top: 80px;
+  }
+}
+.nMenu a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+  gap: 7px;
+}
+.nMenu a p {
+  display: flex;
+  flex-grow: 1;
+  white-space: wrap;
+  text-align: right;
+  color: #212323;
+  font-weight: 500;
+}
+@media (max-width: 550px) {
+  .nMenu a p {
+    font-size: 0.9rem;
+  }
+}
+.nMenu a div,
+.nMenu a span {
+  margin: 0 !important;
+}
+.nMenu a .status-active,
+.nMenu a .status-inactive,
+.nMenu a .status-pending {
+  scale: 0.9;
+}
+
+.nico.active .nMenu {
+  opacity: 1;
+  height: auto;
+  max-height: 300px;
+}
+
+.notification {
+  padding: 0;
+  gap: 5px;
+}
+.notification a {
+  padding: 20px 10px;
+  position: relative;
+  background-color: #e2e2e2;
+}
+.notification a .daten {
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  font-size: 0.8rem;
+  color: #049BB9;
+}
+.notification .isRead {
+  background-color: #fff;
+}
+
+.langMenu {
+  width: 150px;
+  padding: 10px 20px;
+  gap: 10px;
+}
+@media (max-width: 500px) {
+  .langMenu {
+    width: calc(100% - 40px);
+  }
+}
+.langMenu a img {
+  margin: 0;
+  width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .dark {
   background-color: #494949;
 }
@@ -2790,6 +2899,7 @@ nav.nav .logo span {
 .dark .input select,
 .dark .input .selected-option {
   background-color: #5d5d5d;
+  color: #fff;
 }
 .dark .input input::-moz-placeholder, .dark .input textarea::-moz-placeholder, .dark .input select::-moz-placeholder, .dark .input .selected-option::-moz-placeholder {
   color: #fff;
@@ -2801,6 +2911,12 @@ nav.nav .logo span {
 .dark .input .selected-option::placeholder {
   color: #fff;
   opacity: 0.8;
+}
+.dark .input input i,
+.dark .input textarea i,
+.dark .input select i,
+.dark .input .selected-option i {
+  color: #fff;
 }
 .dark .label {
   background-color: #5d5d5d;
@@ -2814,6 +2930,20 @@ nav.nav .logo span {
 .dark .select2.active .selected-option {
   background-color: #049BB9;
   color: #fff;
+}
+.dark .input .select select,
+.dark .input .select option {
+  color: #fff;
+}
+.dark .input .select i {
+  color: #fff !important;
+}
+.dark .input .select .fa-calendar-days {
+  color: #fff !important;
+  opacity: 1;
+}
+.dark .input .select img, .dark .input .select svg {
+  filter: invert(1) brightness(2);
 }
 .dark .tg tr td {
   color: #fff;
@@ -2894,4 +3024,31 @@ nav.nav .logo span {
 .dark .pagesBtns .active {
   background-color: #049BB9;
   border-color: #7c7c7c !important;
+}
+.dark .nMenu {
+  background-color: #6e6e6e;
+}
+.dark .nMenu p {
+  color: #fff;
+}
+.dark .nMenu.notification {
+  background-color: #6e6e6e;
+}
+.dark .nMenu.notification::-webkit-scrollbar-thumb {
+  background-color: #02758d;
+}
+.dark .nMenu.notification p {
+  color: #fff;
+}
+.dark .nMenu.notification a {
+  background-color: #8d8d8d;
+}
+.dark .nMenu.notification .daten {
+  color: #02758d;
+}
+.dark .nMenu.notification .isRead {
+  background-color: transparent;
+}
+.dark .nMenu.notification .isRead .daten {
+  color: #049BB9;
 }/*# sourceMappingURL=style.css.map */

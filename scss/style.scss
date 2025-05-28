@@ -1584,6 +1584,7 @@ nav.nav {
   padding: 0 20px;
   font-size: 0.8rem;
   min-width: 80px;
+  white-space: nowrap;
 }
 .status-active {
   @extend .status;
@@ -2545,28 +2546,130 @@ nav.nav {
   background-color: $gray;
 }
 @media (max-width: 500px) {
-  .filter2{
+  .filter2 {
     width: 100%;
     button {
       width: 100% !important;
     }
   }
-  
 }
-.pagesBtns{
+.pagesBtns {
   width: 100%;
   display: flex;
   gap: 5px;
   padding-top: 30px;
   flex-wrap: wrap;
-  .btn{
+  .btn {
     background-color: #fff;
     @extend .border2;
-    color: #000
+    color: #000;
   }
-  .active{
+  .active {
     background-color: $main;
     color: #fff;
   }
 }
+.nMenu {
+  position: absolute;
+  top: calc(100% + 20px);
+  width: 300px;
+  padding: 15px 20px 15px 10px;
+  left: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: scroll;
+  opacity: 0;
+  height: 0;
+  transition: 0.2s all ease;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $active;
+    border-radius: 10px;
+  }
+  @media (max-width: 500px) {
+    position: fixed;
+    width: calc(100% - 40px);
+    left: 20px;
+    top: 80px;
+  }
+  a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    gap: 7px;
+    p {
+      display: flex;
+      flex-grow: 1;
+      white-space: wrap;
+      text-align: right;
+      color: $black;
+      font-weight: 500;
+      @media (max-width: 550px) {
+        font-size: 0.9rem;
+      }
+    }
+    div,
+    span {
+      margin: 0 !important;
+    }
+    .status-active,
+    .status-inactive,
+    .status-pending {
+      scale: 0.9;
+    }
+  }
+}
+.nico.active {
+  .nMenu {
+    opacity: 1;
+    height: auto;
+    max-height: 300px;
+  }
+}
+.notification {
+  padding: 0;
+  gap: 5px;
+  a {
+    padding: 20px 10px;
+    position: relative;
+    background-color: #e2e2e2;
+
+    .daten {
+      position: absolute;
+      left: 3px;
+      bottom: 3px;
+      font-size: 0.8rem;
+      color: $active;
+    }
+  }
+  .isRead {
+    background-color: #fff;
+  }
+}
+.langMenu {
+  width: 150px;
+  padding: 10px 20px;
+  gap: 10px;
+  @media (max-width: 500px) {
+    width: calc(100% - 40px);
+  }
+  a {
+    img {
+      margin: 0;
+      width: 30px;
+      object-fit: contain;
+    }
+  }
+}
+
 @import "./_dark";

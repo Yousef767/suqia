@@ -140,13 +140,17 @@
     select,
     .selected-option {
       background-color: #5d5d5d;
-      // color: #fff;
+      color: #fff;
       &::placeholder {
         color: #fff;
         opacity: 0.8;
       }
+      i {
+        color: #fff;
+      }
     }
   }
+
   .label {
     background-color: #5d5d5d;
   }
@@ -162,6 +166,24 @@
     .selected-option {
       background-color: $active;
       color: #fff;
+    }
+  }
+  .input {
+    .select {
+      select,
+      option {
+        color: #fff;
+      }
+      i {
+        color: #fff !important;
+      }
+      .fa-calendar-days {
+        color: #fff !important;
+        opacity: 1;
+      }
+      img,svg {
+        filter: invert(1) brightness(2) ;
+      }
     }
   }
   .tg {
@@ -261,6 +283,33 @@
     .active {
       background-color: $active;
       border-color: #7c7c7c !important;
+    }
+  }
+  .nMenu{
+    background-color: #6e6e6e;
+    p{
+      color: #fff;
+    }
+  }
+  .nMenu.notification{
+    background-color: #6e6e6e;
+    &::-webkit-scrollbar-thumb{
+      background-color: $dark-main;
+    }
+    p{
+      color: #fff;
+    }
+    a{
+      background-color: #8d8d8d;
+    }
+    .daten{
+      color: $dark-main;
+    }
+    .isRead{
+      background-color: transparent;
+      .daten{
+        color: $active;
+      }
     }
   }
 }
