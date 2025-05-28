@@ -254,4 +254,13 @@
       color: #fff;
     }
   }
+  .pagesBtns {
+    .btn {
+      background-color: #828282;
+    }
+    .active {
+      background-color: $active;
+      border-color: #7c7c7c !important;
+    }
+  }
 }

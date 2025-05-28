@@ -2887,4 +2887,11 @@ nav.nav .logo span {
 .dark .filterInputs input {
   background-color: #828282;
   color: #fff;
+}
+.dark .pagesBtns .btn {
+  background-color: #828282;
+}
+.dark .pagesBtns .active {
+  background-color: #049BB9;
+  border-color: #7c7c7c !important;
 }/*# sourceMappingURL=style.css.map */
