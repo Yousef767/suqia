@@ -14,16 +14,19 @@ const message = (message, isError) => {
     div.remove();
   }, 3000);
 };
+function toggleFilter(id) {
+  const el = document.getElementById(id);
+  el.parentElement.classList.toggle("active");
+}
 
 let menuBtn = document.getElementById("menu");
 let dcont = document.querySelector(".dcont");
 
-if(menuBtn) {
+if (menuBtn) {
   menuBtn.addEventListener("click", () => {
-  dcont.classList.toggle("showNavLinks");
-});
+    dcont.classList.toggle("showNavLinks");
+  });
 }
-
 
 const drop = document.querySelectorAll(".drop");
 drop.forEach((e) => {

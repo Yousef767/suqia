@@ -368,6 +368,9 @@ nav.nav .logo span {
   }
 }
 
+.col2 {
+  align-items: flex-start;
+}
 .col2 .input {
   width: calc(50% - 15px);
   flex-grow: 1;
@@ -379,6 +382,24 @@ nav.nav .logo span {
 }
 @media (max-width: 700px) {
   .col2 .input {
+    width: 100%;
+  }
+}
+
+.col4 {
+  align-items: flex-start;
+}
+.col4 .input {
+  width: calc(25% - 15px);
+  flex-grow: 1;
+}
+@media (max-width: 1200px) {
+  .col4 .input {
+    width: calc(33.3333333333% - 15px);
+  }
+}
+@media (max-width: 800px) {
+  .col4 .input {
     width: 100%;
   }
 }
@@ -1740,7 +1761,7 @@ nav.nav .logo span {
   background-color: #c7c7c8;
 }
 
-.border2, .message span, .user {
+.border2, .pagesBtns .btn, .message span, .user {
   border: 2px solid #e5e7eb;
 }
 
@@ -2604,8 +2625,8 @@ nav.nav .logo span {
   font-size: 0.8rem;
 }
 
-.filter.active .filterInputs {
-  display: flex;
+.filter2 button {
+  width: 250px;
 }
 
 .filter.active button i {
@@ -2613,7 +2634,6 @@ nav.nav .logo span {
 }
 
 .filterInputs {
-  display: none;
   position: absolute;
   top: 50px !important;
   background: white;
@@ -2621,10 +2641,21 @@ nav.nav .logo span {
   left: 0;
   border: 1px solid #ddd;
   border-radius: 8px;
+  display: flex;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   flex-direction: column;
   gap: 5px;
   z-index: 10;
+  display: none;
+}
+.filterInputs label {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2px;
+}
+
+.filter.active .filterInputs {
+  display: flex !important;
 }
 
 .filterInputs input {
@@ -2635,6 +2666,30 @@ nav.nav .logo span {
   border-radius: 5px;
   text-align: right;
   background-color: #e5e7eb;
+}
+
+@media (max-width: 500px) {
+  .filter2 {
+    width: 100%;
+  }
+  .filter2 button {
+    width: 100% !important;
+  }
+}
+.pagesBtns {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+.pagesBtns .btn {
+  background-color: #fff;
+  color: #000;
+}
+.pagesBtns .active {
+  background-color: #049BB9;
+  color: #fff;
 }
 
 .dark {
@@ -2710,18 +2765,18 @@ nav.nav .logo span {
 .dark #search.active svg path {
   fill: #049BB9 !important;
 }
-.dark .border2, .dark .user, .dark .message span, .message .dark span {
+.dark .border2, .dark .user, .dark .message span, .message .dark span, .dark .pagesBtns .btn, .pagesBtns .dark .btn {
   border-color: #7c7c7c !important;
 }
 .dark .message span {
   background-color: #323232 !important;
 }
 .dark .tg tr td {
-  background-color: #979797;
+  background-color: #5d5d5d;
   border-color: #7c7c7c !important;
 }
 .dark .paginationCont {
-  background-color: #979797;
+  background-color: #5d5d5d;
 }
 .dark .tools .a .fa-file-pen {
   color: #e3e2e2;
@@ -2734,7 +2789,7 @@ nav.nav .logo span {
 .dark .input textarea,
 .dark .input select,
 .dark .input .selected-option {
-  background-color: #979797;
+  background-color: #5d5d5d;
 }
 .dark .input input::-moz-placeholder, .dark .input textarea::-moz-placeholder, .dark .input select::-moz-placeholder, .dark .input .selected-option::-moz-placeholder {
   color: #fff;
@@ -2748,7 +2803,7 @@ nav.nav .logo span {
   opacity: 0.8;
 }
 .dark .label {
-  background-color: #979797;
+  background-color: #5d5d5d;
 }
 .dark .select2.active svg path {
   fill: #fff;
@@ -2764,7 +2819,7 @@ nav.nav .logo span {
   color: #fff;
 }
 .dark .custom-menu li {
-  background-color: #979797;
+  background-color: #5d5d5d;
   border-color: #7c7c7c;
 }
 .dark .custom-menu li:hover {
@@ -2790,7 +2845,7 @@ nav.nav .logo span {
   color: #fff;
 }
 .dark .chart {
-  background-color: #848484;
+  background-color: #5d5d5d;
 }
 .dark .chart .chartHeader h2 {
   color: #fff;
@@ -2799,7 +2854,7 @@ nav.nav .logo span {
   color: white !important;
 }
 .dark .filter button {
-  background-color: #b4b4b4;
+  background-color: #828282;
   color: #fff;
   border: 1px solid #444;
   border-color: #7c7c7c;
@@ -2811,7 +2866,7 @@ nav.nav .logo span {
   filter: brightness(0) invert(1);
 }
 .dark .itm {
-  background-color: #848484;
+  background-color: #5d5d5d;
 }
 .dark .itm span {
   color: #fff;
@@ -2830,6 +2885,6 @@ nav.nav .logo span {
   color: #fff;
 }
 .dark .filterInputs input {
-  background-color: #b4b4b4;
+  background-color: #828282;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */

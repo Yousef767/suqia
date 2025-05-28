@@ -115,13 +115,13 @@
   .tg {
     tr {
       td {
-        background-color: #979797;
+        background-color: #5d5d5d;
         border-color: #7c7c7c !important;
       }
     }
   }
   .paginationCont {
-    background-color: #979797;
+    background-color: #5d5d5d;
   }
   .tools {
     .a {
@@ -139,7 +139,7 @@
     textarea,
     select,
     .selected-option {
-      background-color: #979797;
+      background-color: #5d5d5d;
       // color: #fff;
       &::placeholder {
         color: #fff;
@@ -148,7 +148,7 @@
     }
   }
   .label {
-    background-color: #979797;
+    background-color: #5d5d5d;
   }
   .select2.active {
     svg {
@@ -173,7 +173,7 @@
   }
   .custom-menu {
     li {
-      background-color: #979797;
+      background-color: #5d5d5d;
       border-color: #7c7c7c;
       &:hover {
         background-color: $active;
@@ -206,7 +206,7 @@
     }
   }
   .chart {
-      background-color: #848484;
+    background-color: #5d5d5d;
 
     .chartHeader {
       h2 {
@@ -218,37 +218,40 @@
     color: white !important;
   }
   .filter button {
-    background-color: #b4b4b4;
+    background-color: #828282;
     color: #fff;
     border: 1px solid #444;
     border-color: #7c7c7c;
-    i{
+    i {
       color: #fff;
-      
     }
-    img{
+    img {
       filter: brightness(0) invert(1);
     }
   }
-  .itm{
-      background-color: #848484;
-      span{
-        color: #fff;
-        opacity: .8;
-      }
-      img{
+
+  .itm {
+    background-color: #5d5d5d;
+    span {
+      color: #fff;
+      opacity: 0.8;
+    }
+    img {
       filter: brightness(0) invert(1);
     }
-    h1{
+    h1 {
       color: $dark-main;
     }
   }
-  .filterInputs{
+  .filterInputs {
     background-color: #616161;
-    label{color: #fff;}
+    label {
+      color: #fff;
+    }
 
-    input{
-      background-color: #b4b4b4;color: #fff;
+    input {
+      background-color: #828282;
+      color: #fff;
     }
   }
 }

@@ -361,6 +361,7 @@ nav.nav {
   }
 }
 .col2 {
+  align-items: flex-start;
   .input {
     width: calc(100% / 2 - 15px);
     flex-grow: 1;
@@ -368,6 +369,19 @@ nav.nav {
       width: calc(100% / 2 - 15px);
     }
     @media (max-width: 700px) {
+      width: calc(100%);
+    }
+  }
+}
+.col4 {
+  align-items: flex-start;
+  .input {
+    width: calc(100% / 4 - 15px);
+    flex-grow: 1;
+    @media (max-width: 1200px) {
+      width: calc(100% / 3 - 15px);
+    }
+    @media (max-width: 800px) {
       width: calc(100%);
     }
   }
@@ -2465,6 +2479,7 @@ nav.nav {
 .filter {
   position: relative;
 }
+
 .filter button {
   @include flex();
   width: 120px;
@@ -2486,16 +2501,18 @@ nav.nav {
     font-size: 0.8rem;
   }
 }
-.filter.active .filterInputs {
-  display: flex;
+.filter2 {
+  button {
+    width: 250px;
+  }
 }
+
 .filter.active button {
   i {
     transform: rotate(-90deg);
   }
 }
 .filterInputs {
-  display: none;
   position: absolute;
   top: 50px !important;
   background: white;
@@ -2503,18 +2520,53 @@ nav.nav {
   left: 0;
   border: 1px solid #ddd;
   border-radius: 8px;
+  display: flex;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   flex-direction: column;
   gap: 5px;
   z-index: 10;
+  display: none;
+  label {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2px;
+  }
+}
+.filter.active .filterInputs {
+  display: flex !important;
 }
 .filterInputs input {
   border: none;
   outline: none;
   padding: 5px;
   width: 150px;
-  border-radius: 5px;text-align: right;
+  border-radius: 5px;
+  text-align: right;
   background-color: $gray;
-;
+}
+@media (max-width: 500px) {
+  .filter2{
+    width: 100%;
+    button {
+      width: 100% !important;
+    }
+  }
+  
+}
+.pagesBtns{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  .btn{
+    background-color: #fff;
+    @extend .border2;
+    color: #000
+  }
+  .active{
+    background-color: $main;
+    color: #fff;
+  }
 }
 @import "./_dark";

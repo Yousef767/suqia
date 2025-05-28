@@ -1,9 +1,6 @@
-function toggleFilter(id) {
-  const el = document.getElementById(id);
-  el.parentElement.classList.toggle("active");
-}
-// Line Chart
+
 const salesCtx = document.getElementById("salesChart").getContext("2d");
+
 const salesChart = new Chart(salesCtx, {
   type: "line",
   data: {
@@ -24,9 +21,9 @@ const salesChart = new Chart(salesCtx, {
         backgroundColor: "rgba(4, 155, 185, 0.265)",
         tension: 0.4,
         fill: true,
-        pointRadius: 6, // Hide points normally
-        pointHoverRadius: 6, // Circle on hover
-        pointHitRadius: 20, // Easier to hover
+        pointRadius: 6,
+        pointHoverRadius: 6,
+        pointHitRadius: 20,
         pointHoverBackgroundColor: "#049BB9",
         pointHoverBorderColor: "#fff",
         pointHoverBorderWidth: 2,
@@ -36,33 +33,20 @@ const salesChart = new Chart(salesCtx, {
   options: {
     responsive: true,
     plugins: {
-      legend: {
-        display: false,
-      },
+      colors: { enabled: true },
+      legend: { display: false },
     },
     scales: {
-      x: {
-        ticks: {
-          color: "#000",
-        },
-        grid: {
-          color: "#e5e7eb",
-        },
-      },
+      x: { ticks: { color: "#000" }, grid: { color: "#e5e7eb" } },
       y: {
         beginAtZero: true,
-        ticks: {
-          color: "#000",
-        },
-        grid: {
-          color: "#e5e7eb",
-        },
+        ticks: { color: "#000" },
+        grid: { color: "#e5e7eb" },
       },
     },
   },
 });
 
-// Pie Chart
 const projectCtx = document.getElementById("projectChart").getContext("2d");
 const projectChart = new Chart(projectCtx, {
   type: "pie",
@@ -95,30 +79,61 @@ const projectChart = new Chart(projectCtx, {
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          font: {
-            size: 10,
-          },
+          font: { size: 10 },
           padding: 20,
-          generateLabels(chart) {
-            const data = chart.data.datasets[0].data;
-            const total = data.reduce((a, b) => a + b, 0);
-            return chart.data.labels.map((label, i) => {
-              const value = data[i];
-              const percentage = ((value / total) * 100).toFixed(1) + "%";
-              return {
-                // text: `${label} ${percentage}`,
-                text: `${percentage}`,
-                fillStyle: chart.data.datasets[0].backgroundColor[i],
-                strokeStyle: chart.data.datasets[0].backgroundColor[i],
-                lineWidth: 0,
-                hidden: chart.getDatasetMeta(0).data[i].hidden,
-                index: i,
-                pointStyle: "circle",
-              };
-            });
-          },
+          color: "#000",
         },
       },
     },
   },
 });
+
+function generateLegendLabelsWithColor(chart, textColor) {
+  const data = chart.data.datasets[0].data;
+  const total = data.reduce((a, b) => a + b, 0);
+  return chart.data.labels.map((label, i) => {
+    const value = data[i];
+    const percentage = ((value / total) * 100).toFixed(1) + "%";
+    return {
+      text: percentage,
+      fillStyle: chart.data.datasets[0].backgroundColor[i],
+      strokeStyle: chart.data.datasets[0].backgroundColor[i],
+      lineWidth: 0,
+      hidden: chart.getDatasetMeta(0).data[i].hidden,
+      index: i,
+      pointStyle: "circle",
+      fontColor: textColor, 
+      color: textColor, 
+    };
+  });
+}
+
+const updateChartsTheme = () => {
+  const isDark = localStorage.getItem("theme") === "dark";
+  const textColor = isDark ? "#fff" : "#000";
+
+  salesChart.options.scales.x.ticks.color = textColor;
+  salesChart.options.scales.y.ticks.color = textColor;
+  salesChart.options.scales.x.grid.color = isDark
+    ? "rgba(255,255,255,0.1)"
+    : "#e5e7eb";
+  salesChart.options.scales.y.grid.color = isDark
+    ? "rgba(255,255,255,0.1)"
+    : "#e5e7eb";
+
+  if (salesChart.options.plugins.legend.labels) {
+    salesChart.options.plugins.legend.labels.color = textColor;
+  }
+  salesChart.update();
+
+
+  if (projectChart.options.plugins.legend.labels) {
+    projectChart.options.plugins.legend.labels.color = textColor;
+    projectChart.options.plugins.legend.labels.generateLabels = (chart) =>
+      generateLegendLabelsWithColor(chart, textColor);
+  }
+  projectChart.update();
+};
+
+
+setInterval(updateChartsTheme, 100);
