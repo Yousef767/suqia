@@ -63,24 +63,21 @@ const printReceipt = (receiptData) => {
     ctx.fillStyle = "#000";
     ctx.font = "500 27px Segoe UI";
 
-    // Date
     ctx.fillText(receiptData.date.day, 1360, 385);
     ctx.fillText(receiptData.date.month, 1280, 385);
     ctx.fillText(receiptData.date.year, 1155, 385);
 
-    // Basic data
-    ctx.fillText(receiptData.amountText, 1202, 445); 
+    ctx.fillText(receiptData.amount, 1202, 445); 
     ctx.fillText(receiptData.receiptNumber, 221, 365); 
 
     ctx.fillText(receiptData.client_name, 600, 535); 
     ctx.fillText(receiptData.amount, 700, 616); 
 
-    // Receive method
+
     if (receiptData.receiveMethod.cash) ctx.fillText("✔", 1450, 717);
     if (receiptData.receiveMethod.check) ctx.fillText("✔", 1345, 717);
 
-    // For
-    ctx.fillText(receiptData.for, 500, 800); // Purpose of payment
+    ctx.fillText(receiptData.for, 500, 800); 
 
     document.body.appendChild(canvas);
 
