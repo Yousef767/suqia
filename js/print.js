@@ -5,10 +5,11 @@ const printContract = (contractData) => {
   image.crossOrigin = "anonymous";
   image.src = "https://suqia.netlify.app/media/c.png";
 
-  image.onload = () => {
+  image.onload = async () => {
     canvas.width = image.width;
     canvas.height = image.height;
     ctx.drawImage(image, 0, 0);
+
     ctx.fillStyle = "#000";
     ctx.font = "500 22px Segoe UI";
 
@@ -35,17 +36,19 @@ const printContract = (contractData) => {
     ctx.fillText(contractData.project.duration, 350, 1150);
     ctx.fillText(contractData.signature.clientName, 350, 1540);
 
-    document.body.appendChild(canvas);
+    const imgData = canvas.toDataURL("image/jpeg", 1.0);
 
-    setTimeout(() => {
-      const link = document.createElement("a");
-      link.download = `contract-${Date.now()}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
+    // Create and save PDF
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({
+      orientation: "portrait",
+      unit: "px",
+      format: [canvas.width, canvas.height],
+    });
 
-      // Clean up
-      document.body.removeChild(canvas);
-    }, 100);
+    pdf.addImage(imgData, "JPEG", 0, 0, canvas.width, canvas.height);
+    pdf.save(`contract-${Date.now()}.pdf`);
+    document.body.removeChild(canvas);
   };
 };
 
@@ -54,12 +57,14 @@ const printReceipt = (receiptData) => {
   const ctx = canvas.getContext("2d");
   const image = new Image();
   image.crossOrigin = "anonymous";
-  image.src = "https://suqia.netlify.app/media/r.png"; 
+  image.src = "https://suqia.netlify.app/media/r.png";
 
   image.onload = () => {
+    // Set canvas size to image size
     canvas.width = image.width;
     canvas.height = image.height;
     ctx.drawImage(image, 0, 0);
+
     ctx.fillStyle = "#000";
     ctx.font = "500 27px Segoe UI";
 
@@ -67,26 +72,32 @@ const printReceipt = (receiptData) => {
     ctx.fillText(receiptData.date.month, 1280, 385);
     ctx.fillText(receiptData.date.year, 1155, 385);
 
-    ctx.fillText(receiptData.amount, 1202, 445); 
-    ctx.fillText(receiptData.receiptNumber, 221, 365); 
+    ctx.fillText(receiptData.amount, 1202, 445);
+    ctx.fillText(receiptData.receiptNumber, 221, 365);
 
-    ctx.fillText(receiptData.client_name, 600, 535); 
-    ctx.fillText(receiptData.amount, 700, 616); 
-
+    ctx.fillText(receiptData.client_name, 600, 535);
+    ctx.fillText(receiptData.amount, 700, 616);
 
     if (receiptData.receiveMethod.cash) ctx.fillText("✔", 1450, 717);
     if (receiptData.receiveMethod.check) ctx.fillText("✔", 1345, 717);
 
-    ctx.fillText(receiptData.for, 500, 800); 
+    ctx.fillText(receiptData.for, 500, 800);
 
-    document.body.appendChild(canvas);
+    const imgData = canvas.toDataURL("image/jpeg", 1.0);
 
-    setTimeout(() => {
-      const link = document.createElement("a");
-      link.download = `receipt-${Date.now()}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
-      document.body.removeChild(canvas);
-    }, 100);
+    const { jsPDF } = window.jspdf;
+
+    // Calculate the aspect ratio
+    const imgWidth = 600; // PDF units (you can adjust as needed)
+    const imgHeight = (canvas.height / canvas.width) * imgWidth;
+
+    const pdf = new jsPDF({
+      orientation: "landscape", // best for wide images
+      unit: "px",
+      format: [imgWidth, imgHeight],
+    });
+
+    pdf.addImage(imgData, "JPEG", 0, 0, imgWidth, imgHeight);
+    pdf.save(`receipt-${Date.now()}.pdf`);
   };
 };
