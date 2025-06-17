@@ -38,7 +38,6 @@ const printContract = (contractData) => {
 
     const imgData = canvas.toDataURL("image/jpeg", 1.0);
 
-    // Create and save PDF
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({
       orientation: "portrait",
@@ -87,12 +86,11 @@ const printReceipt = (receiptData) => {
 
     const { jsPDF } = window.jspdf;
 
-    // Calculate the aspect ratio
-    const imgWidth = 600; // PDF units (you can adjust as needed)
+    const imgWidth = 600; 
     const imgHeight = (canvas.height / canvas.width) * imgWidth;
 
     const pdf = new jsPDF({
-      orientation: "landscape", // best for wide images
+      orientation: "landscape", 
       unit: "px",
       format: [imgWidth, imgHeight],
     });
