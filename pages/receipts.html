@@ -449,36 +449,9 @@
                   <td>باكستان</td>
                   <td>
                     <div class="tools">
-                      <button class="a print" onclick="printContract({
-                        date: { day: '17', month: '06', year: '2025' },
-                        contractNumber: '123',
-                        client: {
-                          name: 'Client name',
-                          phone: '+201006770769',
-                          email: 'email@test.com'
-                        },
-                        receiveReport: {
-                          hand_to_hand: true,
-                          email: false,
-                          whatsapp: false,
-                          mail: false
-                        },
-                        project: {
-                          name: 'Project name',
-                          notes: 'notes',
-                          details: 'Project details details details details details details',
-                          location: 'Project loaction',
-                          number: '123434',
-                          cost: '1200 دينار',
-                          duration: '3 months'
-                        },
-                        receipt: {
-                          number: '74567'
-                        },
-                        signature: {
-                          clientName: 'Client name'
-                        }
-                        })">طباعة </button>
+                      <button class="a print" onclick='printReceipt({ date: { day: "17" , month: "06" , year: "2025" },
+                        amount: "1200 دينار" , receiptNumber: "123" , client_name: "احمد رائد فهمي الحشايكة",
+                        receiveMethod: { cash: true, check: false }, for: "For" })'>طباعة </button>
                     </div>
                   </td>
                 </tr>

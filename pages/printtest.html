@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <title>إضافة بيانات على العقد</title>
+  <style>
+    @font-face {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      src: url('../media/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 700;
+    }
+
+    canvas {
+      border: 1px solid #ccc;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <canvas id="contractCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('contractCanvas');
+    const ctx = canvas.getContext('2d');
+    const image = new Image();
+    image.src = '../media/r.png';
+
+    image.onload = () => {
+      canvas.width = image.width;
+      canvas.height = image.height;
+      ctx.drawImage(image, 0, 0);
+      ctx.fillStyle = "#000";
+      ctx.font = "500 27px Segoe UI";
+      ctx.fillText("17", 1360, 385);   // Day
+      ctx.fillText("06", 1280, 385);   // Month
+      ctx.fillText("2025", 1155, 385); // Year
+      ctx.fillText("1200 دينار", 1202, 445); // Amount
+      ctx.fillText("123", 221, 365); // No.
+
+      ctx.fillText("احمد رائد فهمي الحشايكة", 600, 535); // Client Name
+      ctx.fillText("1200 دينار", 700, 616); // Amount
+      // recieve_method
+      ctx.fillText("✔", 1450, 717); // cash
+      ctx.fillText("✔", 1345, 717);  // check number
+
+      ctx.fillText("For", 500, 800); // For
+
+
+      // setTimeout(() => {
+      //   const link = document.createElement('a');
+      //   link.download = 'contract-image.png';
+      //   link.href = canvas.toDataURL('image/png');
+      //   link.click();
+      // }, 2000);
+    };
+  </script>
+
+</body>
+
+</html>

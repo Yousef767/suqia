@@ -48,3 +48,48 @@ const printContract = (contractData) => {
     }, 100);
   };
 };
+
+const printReceipt = (receiptData) => {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  const image = new Image();
+  image.crossOrigin = "anonymous";
+  image.src = "https://suqia.netlify.app/media/r.png"; 
+
+  image.onload = () => {
+    canvas.width = image.width;
+    canvas.height = image.height;
+    ctx.drawImage(image, 0, 0);
+    ctx.fillStyle = "#000";
+    ctx.font = "500 27px Segoe UI";
+
+    // Date
+    ctx.fillText(receiptData.date.day, 1360, 385);
+    ctx.fillText(receiptData.date.month, 1280, 385);
+    ctx.fillText(receiptData.date.year, 1155, 385);
+
+    // Basic data
+    ctx.fillText(receiptData.amountText, 1202, 445); 
+    ctx.fillText(receiptData.receiptNumber, 221, 365); 
+
+    ctx.fillText(receiptData.client_name, 600, 535); 
+    ctx.fillText(receiptData.amount, 700, 616); 
+
+    // Receive method
+    if (receiptData.receiveMethod.cash) ctx.fillText("✔", 1450, 717);
+    if (receiptData.receiveMethod.check) ctx.fillText("✔", 1345, 717);
+
+    // For
+    ctx.fillText(receiptData.for, 500, 800); // Purpose of payment
+
+    document.body.appendChild(canvas);
+
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.download = `receipt-${Date.now()}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+      document.body.removeChild(canvas);
+    }, 100);
+  };
+};
