@@ -2,7 +2,8 @@ const printContract = (contractData) => {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
   const image = new Image();
-  image.src = "../media/c.png";
+  image.crossOrigin = "anonymous";
+  image.src = "https://suqia.netlify.app/media/c.png";
 
   image.onload = () => {
     canvas.width = image.width;
